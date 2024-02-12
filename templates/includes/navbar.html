@@ -1,4 +1,123 @@
+{% load static %}
 <header class="container-fluid">
+    <div id="topnav" class="row pt-lg-2 d-none d-lg-flex">
+        <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
+            <a href="" class="nav-link">
+                <img src="" class="logo-img">
+                <h2 class="logo-font my-0"><strong>Clean</strong>Cosmetics</h2>
+            </a>
+        </div>
+        <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+            <form method="GET" action="">
+                <div class="input-group w-100">
+                    <input class="form-control border mx-1 rounded-0" type="text" name="q" placeholder="Search Products">
+                    <div class="input-group-append">
+                        <button class="form-control btn btn-black" type="submit" aria-label="search">
+                            <span class="search-icon">
+                                <i class="fas fa-search" aria-hidden="true"></i>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+            <ul class="list-inline list-unstyled text-center text-lg-right my-0">
+                <li class="list-inline-item dropdown">
+                    <a class="text-black nav-link" href="#" id="account-options" aria-haspopup="true" aria-expanded="false"
+                        data-bs-toggle="dropdown">
+                        <div class="text-center">
+                            <div><i class="fas fa-user fa-lg" aria-hidden="true"></i></div>
+                            <p class="my-0">My Account</p>
+                        </div>
+                    </a>
+                    <div class="dropdown-menu border-0" aria-labelledby="account-options">
+                        {% if request.user.is_authenticated %}
+                        {% if request.user.is_superuser %}
+                        <a href="" class="dropdown-item">Admin</a>
+                        {% endif %}
+                        <a href="" class="dropdown-item">My Profile</a>
+                        <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+                        {% else %}
+                        <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+                        <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+                        {% endif %}
+                    </div>
+                </li>
+                <li class="list-inline-item">
+                    <a class="font-weight-bold nav-link" href="">
+                        <div class="text-center">
+                            <div><i class="fas fa-shopping-bag fa-lg" aria-hidden="true"></i></div>
+                            <p class="my-0">
+                                {% if grand_total %}
+                                €{{ grand_total|floatformat:2 }}
+                                {% else %}
+                                €0.00
+                                {% endif %}
+                            </p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+            <div class="navbar-collapse collapse" id="main-nav">
+                <ul class="navbar-nav w-auto mx-auto">
+                    <li class="nav-item d-block d-md-none">
+                        <a class="logo-font font-weight-bold nav-link text-black mr-5" href="">
+                            Home
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="logo-font font-weight-bold nav-link mr-10" href="#" aria-haspopup="true"
+                            aria-expanded="false" data-bs-toggle="dropdown">All Products</a>
+                        <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
+                            <a href="" class="dropdown-item">All Products</a>
+                            <a href="" class="dropdown-item ">By Category</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="logo-font font-weight-bold nav-link" href="#" aria-haspopup="true"
+                            aria-expanded="false" data-bs-toggle="dropdown">Makeup</a>
+                        <div class="dropdown-menu border-0" aria-labelledby="makeup-link">
+                            <a href="" class="dropdown-item fw-bold">Shop All</a>
+                            <a href="" class="dropdown-item">Face</a>
+                            <a href="" class="dropdown-item ">Eyes</a>
+                            <a href="" class="dropdown-item ">Lips</a>
+                            <a href="" class="dropdown-item ">Palettes</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="logo-font font-weight-bold nav-link" href="#" aria-haspopup="true"
+                            aria-expanded="false" data-bs-toggle="dropdown">Skincare</a>
+                        <div class="dropdown-menu border-0" aria-labelledby="skincare-link">
+                            <a href="" class="dropdown-item fw-bold">Shop All</a>
+                            <a href="" class="dropdown-item">Cleansers & Exfoliators</a>
+                            <a href="" class="dropdown-item ">Moisturisers</a>
+                            <a href="" class="dropdown-item ">Toners & Mists</a>
+                            <a href="" class="dropdown-item ">Masks</a>
+                            <a href="" class="dropdown-item ">Skincare Tools</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="logo-font font-weight-bold nav-link" href="#" id="bath-and-body-link" aria-haspopup="true"
+                            aria-expanded="false" data-bs-toggle="dropdown">Bath & Body</a>
+                        <div class="dropdown-menu border-0" aria-labelledby="bath-and-body-link">
+                            <a href="" class="dropdown-item fw-bold">Shop All</a>
+                            <a href="" class="dropdown-item">Bath & Shower</a>
+                            <a href="" class="dropdown-item ">Body Moisturisers</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</header>
+
+
+
+<!-- 
+    <header class="container-fluid">
     <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container-fluid fixed-top">
             <img src="#" alt="" class="logo-img">
@@ -69,4 +188,4 @@
                 </div>
             </div>
     </nav>
-</header>
+</header> -->

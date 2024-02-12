@@ -28,7 +28,7 @@ TEMPLATES_DIR = TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['8000-erincunning-projectport-5owj50gunip.ws-eu108.gitpod.io','.herokuapp.com']
 
@@ -107,7 +107,6 @@ ACCOUNT_USERNAME_MIN_LENGTH = 3
 # ACCOUNT_USER_MODEL_USERNAME_FIELD = 'Enter username'
 LOGIN_URL = '/accounts/login'
 LOGIN_REDIRECT_URL = '/home'
-
 
 WSGI_APPLICATION = 'cleancosmetics.wsgi.application'
 
