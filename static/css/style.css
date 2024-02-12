@@ -61,5 +61,18 @@ body {
 .hero-image {
     background-size: contain;
     height: calc(100vh - 170px);
-    padding: 0 0 20px 40px;
+    padding: 30px 30px 30px 40px;
 }
+
+/* Hero section */
+@media (max-width: 978px) {
+    .hero-image {
+        height: 360px;
+        padding: 0 0 20px;
+    }
+}
+
+@media (max-width: 460px) {
+    .hero-image {
+        height: 284px;
+    }
