@@ -2,7 +2,7 @@
 <header class="container-fluid">
     <div id="topnav" class="row pt-lg-2 d-none d-lg-flex">
         <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
-            <a href="" class="nav-link">
+            <a href="{% url 'home' %}" class="nav-link">
                 <img src="" class="logo-img">
                 <h2 class="logo-font mb-3"><strong>Clean</strong>Cosmetics</h2>
             </a>
@@ -10,7 +10,8 @@
         <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
             <form method="GET" action="">
                 <div class="input-group w-100">
-                    <input class="form-control border mx-1 rounded-0" type="text" name="q" placeholder="Search Products">
+                    <input class="form-control border mx-1 rounded-0" type="text" name="q"
+                        placeholder="Search Products">
                     <div class="input-group-append">
                         <button class="form-control btn btn-black" type="submit" aria-label="search">
                             <span class="search-icon">
@@ -24,8 +25,8 @@
         <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
             <ul class="list-inline list-unstyled text-center text-lg-right my-0">
                 <li class="list-inline-item dropdown">
-                    <a class="text-black nav-link" href="#" id="account-options" aria-haspopup="true" aria-expanded="false"
-                        data-bs-toggle="dropdown">
+                    <a class="text-black nav-link" href="#" id="account-options" aria-haspopup="true"
+                        aria-expanded="false" data-bs-toggle="dropdown">
                         <div class="text-center mx-3">
                             <div><i class="fas fa-user fa-lg" aria-hidden="true"></i></div>
                             <p class="my-0">My Account</p>
@@ -61,56 +62,56 @@
             </ul>
         </div>
     </div>
-            <div class="navbar-collapse collapse" id="main-nav">
-                <ul class="navbar-nav w-auto mx-auto">
-                    <li class="nav-item d-block d-md-none">
-                        <a class="logo-font font-weight-bold nav-link text-black mr-5" href="">
-                            Home
-                        </a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="logo-font font-weight-bold nav-link mr-10" href="#" aria-haspopup="true"
-                            aria-expanded="false" data-bs-toggle="dropdown">All Products</a>
-                        <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
-                            <a href="" class="dropdown-item">All Products</a>
-                            <a href="" class="dropdown-item ">By Category</a>
-                        </div>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="logo-font font-weight-bold nav-link" href="#" aria-haspopup="true"
-                            aria-expanded="false" data-bs-toggle="dropdown">Makeup</a>
-                        <div class="dropdown-menu border-0" aria-labelledby="makeup-link">
-                            <a href="" class="dropdown-item fw-bold">Shop All</a>
-                            <a href="" class="dropdown-item">Face</a>
-                            <a href="" class="dropdown-item ">Eyes</a>
-                            <a href="" class="dropdown-item ">Lips</a>
-                            <a href="" class="dropdown-item ">Palettes</a>
-                        </div>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="logo-font font-weight-bold nav-link" href="#" aria-haspopup="true"
-                            aria-expanded="false" data-bs-toggle="dropdown">Skincare</a>
-                        <div class="dropdown-menu border-0" aria-labelledby="skincare-link">
-                            <a href="" class="dropdown-item fw-bold">Shop All</a>
-                            <a href="" class="dropdown-item">Cleansers & Exfoliators</a>
-                            <a href="" class="dropdown-item ">Moisturisers</a>
-                            <a href="" class="dropdown-item ">Toners & Mists</a>
-                            <a href="" class="dropdown-item ">Masks</a>
-                            <a href="" class="dropdown-item ">Skincare Tools</a>
-                        </div>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="logo-font font-weight-bold nav-link" href="#" id="bath-and-body-link" aria-haspopup="true"
-                            aria-expanded="false" data-bs-toggle="dropdown">Bath & Body</a>
-                        <div class="dropdown-menu border-0" aria-labelledby="bath-and-body-link">
-                            <a href="" class="dropdown-item fw-bold">Shop All</a>
-                            <a href="" class="dropdown-item">Bath & Shower</a>
-                            <a href="" class="dropdown-item ">Body Moisturisers</a>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+    <div class="navbar-collapse" id="main-nav">
+        <ul class="nav nav-pills navbar-right text-black>
+            <li class="nav-item d-block d-md-none">
+                <a class="logo-font font-weight-bold nav-link text-black mr-5" href="{% url 'home' %}">
+                    Home
+                </a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="logo-font font-weight-bold nav-link text-black mr-10" href="" aria-haspopup="true" aria-expanded="false"
+                    data-bs-toggle="dropdown">All Products</a>
+                <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
+                    <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
+                    <a href="" class="dropdown-item ">By Category</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="logo-font font-weight-bold nav-link text-black" href="#" aria-haspopup="true" aria-expanded="false"
+                    data-bs-toggle="dropdown">Makeup</a>
+                <div class="dropdown-menu border-0" aria-labelledby="makeup-link">
+                    <a href="" class="dropdown-item fw-bold">Shop All</a>
+                    <a href="" class="dropdown-item">Face</a>
+                    <a href="" class="dropdown-item ">Eyes</a>
+                    <a href="" class="dropdown-item ">Lips</a>
+                    <a href="" class="dropdown-item ">Palettes</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="logo-font font-weight-bold nav-link text-black" href="#" aria-haspopup="true" aria-expanded="false"
+                    data-bs-toggle="dropdown">Skincare</a>
+                <div class="dropdown-menu border-0" aria-labelledby="skincare-link">
+                    <a href="" class="dropdown-item fw-bold">Shop All</a>
+                    <a href="" class="dropdown-item">Cleansers & Exfoliators</a>
+                    <a href="" class="dropdown-item ">Moisturisers</a>
+                    <a href="" class="dropdown-item ">Toners & Mists</a>
+                    <a href="" class="dropdown-item ">Masks</a>
+                    <a href="" class="dropdown-item ">Skincare Tools</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="logo-font font-weight-bold nav-link text-black" href="#" id="bath-and-body-link" aria-haspopup="true"
+                    aria-expanded="false" data-bs-toggle="dropdown">Bath & Body</a>
+                <div class="dropdown-menu border-0" aria-labelledby="bath-and-body-link">
+                    <a href="" class="dropdown-item fw-bold">Shop All</a>
+                    <a href="" class="dropdown-item">Bath & Shower</a>
+                    <a href="" class="dropdown-item ">Body Moisturisers</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+    </nav>
     </div>
 </header>
 
