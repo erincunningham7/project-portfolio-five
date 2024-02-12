@@ -1,0 +1,66 @@
+:root {
+    --light-green: #606c38;
+    --dark-green: #283618;
+    --white: #fefae0;
+    --light-orange: #dda15e;
+    --background: #fefae0;
+    --dark-orange: #bc6c25;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background);
+}
+
+/* navbar */
+
+.nav-link {
+    font-weight: 600;
+    /* font-family: ; */
+}
+
+.nav-link:hover {
+    color: var(--dark-green) !important;
+}
+
+/* Hero section */
+.hero-text {
+    /*font-family:*/
+}
+
+.hero-orange {
+    color: var(--light-green);
+}
+
+.btn{
+    background-color: var(--light-green);
+    color: var(--white);
+}
+
+.btn:hover {
+    background-color: var(--dark-green);
+    color: var(--white);
+}
+
+.btn {
+    background-color: var(--light-green);
+    color: var(--white);
+}
+
+.hero-btn {
+    box-shadow: 1px 9px 26px -4px rgba(0, 0, 0, 0.66);
+    -webkit-box-shadow: 1px 9px 26px -4px rgba(0, 0, 0, 0.66);
+}
+.bg-orange {
+    background-color: var(--light-orange);
+}
+
+.custom-border {
+    border: var(--dark-orange) 1px solid;
+    border-radius: 10px;
+    box-shadow: 4px 8px 24px -4px rgba(0, 0, 0, 0.66);
+    -webkit-box-shadow: 4px 8px 24px -4px rgba(0, 0, 0, 0.66);
+    -moz-box-shadow: 4px 8px 24px -4px rgba(0, 0, 0, 0.66);
+}
