@@ -3,13 +3,35 @@
 {% load static %}
 
 {% block content %}
-{% include 'includes/hero-section.html' %}
 
-<div class="container">
-    <div class="row">
-        <div class="col">
-            {{ products }}
-        </div>
-    </div>
-</div>
-{% endblock %}
+<div class="row">
+    <div class="product-container col-10 offset-1">
+        <div class="row mt-1 mb-2">
+            <div class="row">
+            {% for product in products %}
+            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
+                <div class="card" style="width: 18rem;">
+                    {% if product.image %}
+                    <a href="#">
+                    <img class="card-img-top" src="{{ product.image }}" alt="{{ product.name }}">
+                    </a>
+                    {% else %}
+                    <a href="#">
+                        <img class="card-img-top" src="{% static 'images/noimage.jpg' %}" alt="{{ product.name }}">
+                    </a>
+                    {% endif %}
+                    <div class="card-body">
+                        <h5 class="card-title">{{ product.name }}</h5>
+                        <p class="card-text">{{ product.description }}</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">{{ product.brand }}</li>
+                        <li class="list-group-item">{{ product.price }}</li>
+                    </ul>
+                    {% endfor %}
+                </div>
+                </div>
+                </div>
+                </div>
+                </div>
+    {% endblock %}
