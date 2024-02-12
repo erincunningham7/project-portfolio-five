@@ -57,3 +57,9 @@ body {
     -webkit-box-shadow: 4px 8px 24px -4px rgba(0, 0, 0, 0.66);
     -moz-box-shadow: 4px 8px 24px -4px rgba(0, 0, 0, 0.66);
 }
+
+.hero-image {
+    background-size: contain;
+    height: calc(100vh - 170px);
+    padding: 0 0 20px 40px;
+}
