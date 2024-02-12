@@ -28,7 +28,7 @@ TEMPLATES_DIR = TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['8000-erincunning-projectport-5owj50gunip.ws-eu108.gitpod.io','.herokuapp.com']
 
@@ -97,16 +97,16 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 ACCOUNT_AUTHENTICATION_METHOD = 'username_email'
 ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
 ACCOUNT_EMAIL_REQUIRED = True
-ACCOUNT_EMAIL_NOTIFICATIONS = True
-ACCOUNT_SESSION_REMEMBER = True
+# ACCOUNT_EMAIL_NOTIFICATIONS = True
+# ACCOUNT_SESSION_REMEMBER = True
 ACCOUNT_SIGNUP_EMAIL_ENTER_TWICE = True
 ACCOUNT_SIGNUP_PASSWORD_ENTER_TWICE = True
 ACCOUNT_UNIQUE_EMAIL = True
 ACCOUNT_USERNAME_MIN_LENGTH = 3
-ACCOUNT_USER_MODEL_EMAIL_FIELD = 'Enter email'
-ACCOUNT_USER_MODEL_USERNAME_FIELD = 'Enter username'
+# ACCOUNT_USER_MODEL_EMAIL_FIELD = 'Enter email'
+# ACCOUNT_USER_MODEL_USERNAME_FIELD = 'Enter username'
 LOGIN_URL = '/accounts/login'
-LOGIN_REDIRECT_URL = '/'
+LOGIN_REDIRECT_URL = '/home'
 
 
 WSGI_APPLICATION = 'cleancosmetics.wsgi.application'
