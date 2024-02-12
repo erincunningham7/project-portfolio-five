@@ -8,6 +8,7 @@
 }
 
 body {
+    font-family: 'Playfair Display', serif;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -18,7 +19,6 @@ body {
 
 .nav-link {
     font-weight: 600;
-    /* font-family: ; */
 }
 
 .nav-link:hover {
@@ -26,13 +26,6 @@ body {
 }
 
 /* Hero section */
-.hero-text {
-    /*font-family:*/
-}
-
-.hero-orange {
-    color: var(--light-green);
-}
 
 .btn{
     background-color: var(--light-green);
