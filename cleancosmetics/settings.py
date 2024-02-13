@@ -108,7 +108,7 @@ ACCOUNT_USERNAME_MIN_LENGTH = 3
 # ACCOUNT_USER_MODEL_EMAIL_FIELD = 'Enter email'
 # ACCOUNT_USER_MODEL_USERNAME_FIELD = 'Enter username'
 LOGIN_URL = '/accounts/login'
-LOGIN_REDIRECT_URL = '/home'
+LOGIN_REDIRECT_URL = '/'
 
 WSGI_APPLICATION = 'cleancosmetics.wsgi.application'
 
