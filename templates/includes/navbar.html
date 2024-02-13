@@ -8,7 +8,7 @@
             </a>
         </div>
         <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
-            <form method="GET" action="{% url 'products' %}">
+            <form method="GET" action="{% url 'products' %}" class="form">
                 <div class="input-group w-100">
                     <input class="form-control border mx-1 rounded-0" type="text" name="q"
                         placeholder="Search Products">
@@ -74,39 +74,38 @@
                     data-bs-toggle="dropdown">All Products</a>
                 <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
                     <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
-                    <a href="" class="dropdown-item ">By Category</a>
                 </div>
             </li>
             <li class="nav-item dropdown">
                 <a class="logo-font font-weight-bold nav-link text-black" href="#" aria-haspopup="true" aria-expanded="false"
                     data-bs-toggle="dropdown">Makeup</a>
                 <div class="dropdown-menu border-0" aria-labelledby="makeup-link">
-                    <a href="" class="dropdown-item fw-bold">Shop All</a>
-                    <a href="" class="dropdown-item">Face</a>
-                    <a href="" class="dropdown-item ">Eyes</a>
-                    <a href="" class="dropdown-item ">Lips</a>
-                    <a href="" class="dropdown-item ">Palettes</a>
+                    <a href="{% url 'products' %}?category=face,eyes,lips,palettes" class="dropdown-item fw-bold">Shop All</a>
+                    <a href="{% url 'products' %}?category=face" class="dropdown-item">Face</a>
+                    <a href="{% url 'products' %}?category=eyes" class="dropdown-item ">Eyes</a>
+                    <a href="{% url 'products' %}?category=lips" class="dropdown-item ">Lips</a>
+                    <a href="{% url 'products' %}?category=palettes" class="dropdown-item ">Palettes</a>
                 </div>
             </li>
             <li class="nav-item dropdown">
                 <a class="logo-font font-weight-bold nav-link text-black" href="#" aria-haspopup="true" aria-expanded="false"
                     data-bs-toggle="dropdown">Skincare</a>
                 <div class="dropdown-menu border-0" aria-labelledby="skincare-link">
-                    <a href="" class="dropdown-item fw-bold">Shop All</a>
-                    <a href="" class="dropdown-item">Cleansers & Exfoliators</a>
-                    <a href="" class="dropdown-item ">Moisturisers</a>
-                    <a href="" class="dropdown-item ">Toners & Mists</a>
-                    <a href="" class="dropdown-item ">Masks</a>
-                    <a href="" class="dropdown-item ">Skincare Tools</a>
+                    <a href="{% url 'products' %}?category=cleansers_exfoliators,moisturisers,toners_mist,masks,skincare_tools" class="dropdown-item fw-bold">Shop All</a>
+                    <a href="{% url 'products' %}?category=cleansers_exfoliators" class="dropdown-item">Cleansers &amp; Exfoliators</a>
+                    <a href="{% url 'products' %}?category=moisturisers" class="dropdown-item ">Moisturisers</a>
+                    <a href="{% url 'products' %}?category=toners_mists" class="dropdown-item ">Toners &amp; Mists</a>
+                    <a href="{% url 'products' %}?category=masks" class="dropdown-item ">Masks</a>
+                    <a href="{% url 'products' %}?category=skincare_tools" class="dropdown-item ">Skincare Tools</a>
                 </div>
             </li>
             <li class="nav-item dropdown">
                 <a class="logo-font font-weight-bold nav-link text-black" href="#" id="bath-and-body-link" aria-haspopup="true"
-                    aria-expanded="false" data-bs-toggle="dropdown">Bath & Body</a>
+                    aria-expanded="false" data-bs-toggle="dropdown">Bath &amp; Body</a>
                 <div class="dropdown-menu border-0" aria-labelledby="bath-and-body-link">
-                    <a href="" class="dropdown-item fw-bold">Shop All</a>
-                    <a href="" class="dropdown-item">Bath & Shower</a>
-                    <a href="" class="dropdown-item ">Body Moisturisers</a>
+                    <a href="{% url 'products' %}?category=bath_shower,body_moisturisers" class="dropdown-item fw-bold">Shop All</a>
+                    <a href="{% url 'products' %}?category=bath_shower" class="dropdown-item">Bath &amp; Shower</a>
+                    <a href="{% url 'products' %}?category=body_moisturisers" class="dropdown-item ">Body Moisturisers</a>
                 </div>
             </li>
         </ul>
