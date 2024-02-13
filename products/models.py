@@ -24,9 +24,7 @@ class Product(models.Model):
     category = models.ForeignKey('Category', null=True, blank=True, on_delete=models.SET_NULL)
     description = models.TextField()
     price = models.DecimalField(max_digits=6, decimal_places=2)
-    image = models.ImageField(
-        null=True, blank=True, upload_to='static/',
-        default='')
+    image = models.ImageField(null=True, blank=True, default='images/noimage.png')
     created_on = models.DateTimeField(auto_now_add=True)
     # in_stock = models.BooleanField(default=True)
     # stock_amount = models.IntegerField(default=1)
