@@ -25,6 +25,16 @@ body {
     color: var(--dark-green) !important;
 }
 
+/* Toasts */
+.message-container {
+    min-height: 30px;
+    position: fixed;
+    top: 72px;
+    right: 15px;
+    z-index: 99999999999;
+}
+
+
 /* Hero section */
 
 .btn{
