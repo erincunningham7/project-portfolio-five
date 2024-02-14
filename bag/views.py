@@ -19,9 +19,11 @@ def add_to_bag(request, item_id):
 
     if item_id in list(bag.keys()):
         bag[item_id] += quantity
-        messages.success(request, f'{product.title} added to your cart')
+        # messages.success(request, f'{product.title} added to your cart')
+        # print(messages.success)
     else:
         bag[item_id] = quantity
+        messages.error(request, f'{product.title} added to your cart')
 
     request.session['bag'] = bag
     # print(request.session['bag'])

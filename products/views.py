@@ -37,6 +37,7 @@ def all_products(request):
 
     return render(request, 'products/products.html', context)
 
+
 def product_info(request, product_id):
     """ A view to show individual product details """
 
