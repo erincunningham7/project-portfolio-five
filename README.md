@@ -197,4 +197,8 @@ The main font used across the site is the Playfair Display font. The Lato font i
 
 ### Code
 
+- The Boutique Ado Walkthrough was used for the base of this website
+- [Django Allauth Documentation](https://docs.allauth.org/en/latest/installation/quickstart.html) was used to install the allauth library and styling
+
+
 
