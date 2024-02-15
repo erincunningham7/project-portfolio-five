@@ -46,6 +46,17 @@ body {
     object-fit: cover;
 }
 
+.shop-btn {
+    box-shadow: 1px 9px 26px -4px rgba(0, 0, 0, 0.66);
+    -webkit-box-shadow: 1px 9px 26px -4px rgba(0, 0, 0, 0.66);
+    background-color: var(--light-green);
+    color: var(--white);
+}
+
+.shop-btn:hover {
+    background-color: var(--dark-green);
+    color: var(--white);
+}
 /* Shopping bag */
 
 .btn-link,
