@@ -25,6 +25,14 @@ body {
     color: var(--dark-green) !important;
 }
 
+/* Shopping bag */
+
+.btn-link,
+.update-link,
+.remove-item {
+    cursor: pointer;
+}
+
 /* Toasts */
 .message-container {
     min-height: 30px;
