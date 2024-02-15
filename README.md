@@ -42,6 +42,46 @@ Clean Cosmetics is an ecommerce application specifically design to facilitate co
 
 ## User Experience
 
+1. As a authenticated user I can easily sign in and sign out so that I can effortlessly access my personal account and perform specific operations eg. make a purchase, review product etc.
+
+2. As a new site user I can easily register for an account so that I can have my own personal account which as a result allows me to access additional features eg. add products to shopping bag.
+
+3.As a registered user I can easily recover my password so that I can access my account again.
+
+4. As a site user I can view the products list so that I can easily discern the product information and select a product to purchase.
+
+5. As a site user I can view an individual products information so that I can identify the price, description, product rating, category etc. of the product.
+
+6. As a site admin I can add a product so that add new products to my store.
+
+7. As a site admin I can remove a product so that add remove products from my store.
+
+8. As a site admin I can edit a product so that add update products accordingly in my store.
+
+9. As a newly registered user I can receive a confirmation email after registering so that ensure my account registration was successful.
+
+10. As a register user I can view my personalized user profile so that I can see my order history and add/edit my payment details.
+
+11. As a site user I can search for a product by name or description so that easily find what I want to buy/view.
+
+12. As a registered user I can view items that have been added to my bag so that see the total cost and view the list of products.
+
+13. As a registered I can review products so that I can express my opinion on products.
+
+14. As a registered user I can easily select the quantity of a product when purchasing so that I am sure I won't select the incorrect amount.
+
+15. As a registered user I can easily enter my personal information and payment details so that I can checkout fast without issues.
+
+16. As a registered user I can receive an email confirmation after checking out so that I can ensure proof of purchase.
+
+17. As a site user I can easily navigate the website so that I can find what I'm looking for comfortably.
+
+18. As a site user I can contact the store so that raise concerns or simply ask for help.
+
+19. As a site user I can read the privacy policy so that I know how my data is processed.
+
+20. As a site user I can filter the products by category so that quickly find what I'm looking for/intending to buy.
+
 ### User Experience
 
 ### Site Goals
