@@ -25,6 +25,12 @@ body {
     color: var(--dark-green) !important;
 }
 
+/* Products */
+
+.product-info {
+    font-family: 'Lato', serif;
+}
+
 /* Shopping bag */
 
 .btn-link,

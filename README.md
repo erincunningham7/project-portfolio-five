@@ -42,11 +42,13 @@ Clean Cosmetics is an ecommerce application specifically design to facilitate co
 
 ## User Experience
 
+### User Stories
+
 1. As a authenticated user I can easily sign in and sign out so that I can effortlessly access my personal account and perform specific operations eg. make a purchase, review product etc.
 
 2. As a new site user I can easily register for an account so that I can have my own personal account which as a result allows me to access additional features eg. add products to shopping bag.
 
-3.As a registered user I can easily recover my password so that I can access my account again.
+3. As a registered user I can easily recover my password so that I can access my account again.
 
 4. As a site user I can view the products list so that I can easily discern the product information and select a product to purchase.
 
@@ -130,7 +132,13 @@ The following functionality is limited to superusers/admins.
 
 ### Colour Scheme
 
+![Colour Scheme](./assets/readme-images/color-palette-pp5.png)
+
+The sites colour scheme has a collection of earthy natural tones that coincide with the purpose of the website - beauty products that are made entirely with natural ingredients. The colours reinforce the website's motivation to stick to the au naturale theme.
+
 ### Fonts
+
+The main font used across the site is the Playfair Display font. The Lato font is used for large chunks of text such as the product description. The Playfair Display font has a showy style, whereas the Lato font is better for large text areas as it's more legible.
 
 ### Database Schema
 
