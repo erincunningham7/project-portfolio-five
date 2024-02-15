@@ -176,7 +176,20 @@ The main font used across the site is the Playfair Display font. The Lato font i
 
 ### Creating a fork
 
+1. Navigate to the [repository](https://github.com/erincunningham7/project-portfolio-five)
+2. In the top-right corner of the page, click the 'Fork' button and select create a fork
+3. You have the option change the name of the fork and/or add a description 
+4. Copy the main branch only, or all branches to the new fork
+5. Click 'Create a Fork'
+6. A repository will then appear in your GitHub
+
 ### Cloning Repository
+
+1. Navigate to the [repository](https://github.com/erincunningham7/project-portfolio-five)
+2. In the top of the repository, click on the 'Code' button and copy the link 
+3. Open Git Bash and change the working directory to the location where you want the cloned directory to be
+4. Type 'git clone' and then paste the link
+5. Press 'Enter' to create your local clone
 
 ## Credits
 
