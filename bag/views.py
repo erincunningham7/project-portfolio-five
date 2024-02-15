@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect, get_object_or_404
+from django.shortcuts import render, redirect, get_object_or_404, reverse
 from django.contrib import messages
 from products.models import Product
 
@@ -35,16 +35,11 @@ def update_bag(request, item_id):
     quantity = int(request.POST.get('quantity'))
     bag = request.session.get('bag', {})
 
-        if quantity > 0:
-            bag[item_id] = quantity
-        else:
-            del bag[item_id]
-            if not bag[item_id]:
-                bag.pop(item_id)
+    if quantity > 0:
+        bag[item_id] = quantity
     else:
-        if quantity > 0:
-            bag[item_id] = quantity
-        else:
+        del bag[item_id]
+        if not bag[item_id]:
             bag.pop(item_id)
 
     request.session['bag'] = bag
@@ -54,7 +49,7 @@ def update_bag(request, item_id):
 def remove_from_bag(request, item_id):
     """Remove an item from the bag"""
 
-    if quantity === 0:
+    if quantity == 0:
         bag = request.session.get('bag', {})
         bag.pop(item_id)
 

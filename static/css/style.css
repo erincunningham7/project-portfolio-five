@@ -31,6 +31,21 @@ body {
     font-family: 'Lato', serif;
 }
 
+/* Products */
+.image-container {
+    overflow: hidden;
+    position: relative;
+}
+.product-card .image-container a.image {
+    display: block;
+}
+.product-card .image-container img {
+    padding-left: 30%;
+    width: 100%;
+    height: 330px;
+    object-fit: cover;
+}
+
 /* Shopping bag */
 
 .btn-link,
@@ -58,11 +73,6 @@ body {
 
 .btn:hover {
     background-color: var(--dark-green);
-    color: var(--white);
-}
-
-.btn {
-    background-color: var(--light-green);
     color: var(--white);
 }
 
