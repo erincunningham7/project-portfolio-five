@@ -177,3 +177,5 @@ STANDARD_DELIVERY_PERCENTAGE = 10
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CSRF_TRUSTED_ORIGINS=['https://8000-erincunning-projectport-5owj50gunip.ws-eu108.gitpod.io']
+
+APPEND_SLASH=False

@@ -26,8 +26,8 @@
                     {% for item in bag_content %}
                     <tr>
                         <td>
-                            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}{{ item.product.image }}"
-                                alt="{{ product.title }}">
+                            <!-- <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}{{ item.product.image }}"
+                                alt="{{ product.title }}"> -->
                         </td>
                         <td>
                             <h5 class="mb-3"><strong>{{ item.product.title }}</strong></h5>
@@ -110,7 +110,7 @@
     $('.remove-item').click(function(e) {
         var csrfToken = "{{ csrf_token }}";
         var itemId = $(this).attr('id').split('remove_')[1];
-        var url = `/bag/remove/${itemId}`;
+        var url = `/bag/remove/${itemId}/`;
         var data = {'csrfmiddlewaretoken': csrfToken,};
 
         $.post(url, data)
