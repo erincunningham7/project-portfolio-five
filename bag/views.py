@@ -22,6 +22,7 @@ def add_to_bag(request, item_id):
         messages.success(request, f'{product.title} added to your cart')
     else:
         bag[item_id] = quantity
+        messages.success(request, f'{product.title} added to your cart')
 
     request.session['bag'] = bag
     return redirect(redirect_url)
@@ -50,5 +51,4 @@ def remove_from_bag(request, item_id):
     product = get_object_or_404(Product, pk=item_id)
     bag.pop(item_id)
     messages.success(request, f'{product.title} removed from your bag')
-    request.session['bag'] = bag
     return HttpResponse(status=200)
