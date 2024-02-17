@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load bag_tools %}
 
 {% block content %}
 <div class="container mb-2">
@@ -75,8 +76,23 @@
                         <td colspan="5" class="pt-6 text-right">
                             <h6><strong>Subotal: €{{ total|floatformat:2 }}</strong></h6>
                             <h6>Delivery: €{{ delivery|floatformat:2 }}</h6>
-                            <h4 class="mt-5"><strong>Grand Total: €{{ grand_total|floatformat:2 }}</strong></h4>
-                            
+                            <h4 class="mt-5"><strong>Grand Total: €{{ grand_total|floatformat:2 }}</strong></h4>   
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="5" class="text-right">
+                            <a href="{% url 'products' %}" class="btn btn-lg fw-bold">
+                                <span class="icon">
+                                    <i class="fas fa-chevron-left"></i>
+                                </span>
+                                <span class="text-uppercase">Continue Shopping</span>
+                            </a>
+                            <a href="{% url 'checkout' %}" class="btn btn-lg fw-bold">
+                                <span class="text-uppercase">Secure Checkout</span>
+                                <span class="icon">
+                                    <i class="fas fa-lock"></i>
+                                </span>
+                            </a>
                         </td>
                     </tr>
                 </table>

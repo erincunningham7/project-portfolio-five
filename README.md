@@ -199,6 +199,7 @@ The main font used across the site is the Playfair Display font. The Lato font i
 
 - The Boutique Ado Walkthrough was used for the base of this website
 - [Django Allauth Documentation](https://docs.allauth.org/en/latest/installation/quickstart.html) was used to install the allauth library and styling
+-[Crispy Forms docs](https://django-crispy-forms.readthedocs.io/en/latest/install.html) was used to install the crispy forms package
 
 
 
