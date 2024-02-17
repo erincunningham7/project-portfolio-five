@@ -4,7 +4,7 @@
 {% load crispy_forms_tags %}
 
 {% block extra_css %}
-<link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
+<link rel="stylesheet" href="{% static '/css/checkout.css' %}">
 {% endblock %}
 
 {% block content %}
@@ -94,8 +94,8 @@
                             {% endif %}
                         </div>
                     </fieldset>
-                    <fieldset></fieldset>
-                    <legend class="fieldset-label small text-black px-2 w-auto">Checkout</legend>
+                    <fieldset>
+                    <legend class="fieldset-label small text-black px-2 w-auto">Payment</legend>
                     <!--stripe-->
                     <div id="card-element"></div>
                     <!--form errors-->
@@ -126,4 +126,11 @@
         </div>
     </div>
 </section>
+{% endblock %}
+
+{% block postloadjs %}
+    {{ block.super }}
+    {{ stripe_public_key|json_script:"id_stripe_public_key" }}
+    {{ client_secret|json_script:"id_client_secret" }}
+    <script src="{% static '/js/stripe_elements.js' %}"></script>
 {% endblock %}
