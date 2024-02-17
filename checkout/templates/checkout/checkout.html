@@ -14,12 +14,12 @@
             <div class="col-12 custom-border py-4">
                 <hr>
                 <h2 class="logo-font mb-4">Checkout</h2>
-                <p class="text-muted">Order Summary ({{ product_count }})</p>
                 <hr>
             </div>
         </div>
         <div class="row">
-            <div class="col-12 col-lg-4 order-lg-last mb-5">
+            <div class="col-12 col-lg-6 order-lg-last mb-5">
+                <p>Order summary: <strong>{{ product_count }} Items</strong></p>
                 <div class="row">
                     <div class="col-7 offset-2">
                         <p class="mb-1 mt-0 small text-muted">Item</p>
@@ -28,23 +28,23 @@
                         <p class="mb-1 mt-0 small text-muted">Subtotal</p>
                     </div>
                 </div>
-                {% for item in bag_items %}
+                {% for content in bag_content %}
                 <div class="row ">
                     <div class="col-2">
-                        <a href="{% url 'product_detail' item.product.id %}">
+                        <!--  -->
                             {% if item.product.image %}
-                            <img class="w-100" src="{{ item.product.image.url }}" alt="{{ product.title }}">
+                            <img class="w-100" src="{{ MEDIA_URL }}{{ product.image }}" alt="{{ product.title }}">
                             {% else %}
                             <img class="w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.title }}">
                             {% endif %}
                         </a>
                     </div>
                     <div class="col-7">
-                        <p class="my-0"><strong>{{ item.product.title }}</strong></p>
-                        <p class="my-0 small text-muted">Qty: {{ item.quantity }}</p>
+                        <p class="my-0"><strong>{{ content.product.title }}</strong></p>
+                        <p class="my-0 small text-muted">Qty: {{ content.quantity }}</p>
                     </div>
                     <div class="col-3 text-right">
-                        <p class="my-0 small text-muted">${{ item.product.price | calc_subtotal:item.quantity }}</p>
+                        <p class="my-0 small text-muted">${{ content.product.price | calc_subtotal:content.quantity }}</p>
                     </div>
                 </div>
                 {% endfor %}
