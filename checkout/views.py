@@ -27,26 +27,28 @@ def checkout(request):
             'country': request.POST['country'],
             'postcode': request.POST['postcode'],
         }
-   else: 
-        bag = request.session.get('bag', {})
-        if not bag:
-            messages.error(request, "There's nothing in your bag!")
-            return redirect(reverse('products'))
+    # else: 
+    #     bag = request.session.get('bag', {})
+    #     if not bag:
+    #         messages.error(request, "There's nothing in your bag!")
+    #         return redirect(reverse('products'))
 
-        current_bag = bag_contents(request)
-        total = current_bag['grand_total']
-        stripe_total = round(total * 100)
-        stripe.api_key = stripe_secret_key
-        intent = stripe.PaymentIntent.create(
-            amount=stripe_total,
-            currency=settings.STRIPE_CURRENCY,
-        )
-        print(intent)
-        order_form  = OrderForm()
-
+    #     current_bag = bag_contents(request)
+    #     total = current_bag['grand_total']
+    #     stripe_total = round(total * 100)
+    #     stripe.api_key = stripe_secret_key
+    #     intent = stripe.PaymentIntent.create(
+    #         amount=stripe_total,
+    #         currency=settings.STRIPE_CURRENCY,
+    #     )
+    #     print(intent)
+    #     order_form  = OrderForm()
+        order_form = OrderForm(form_data)
         if order_form.is_valid():
             order = order_form.save()
             for item_id, item_data in bag.content():
+                try:
+                    product = Product.objects.get(id=item_id)
                     product = Product.objects.get(id=item_id)
                     if isinstance(item_data, int):
                         order_line_item = OrderLineItem(
@@ -56,13 +58,12 @@ def checkout(request):
                         )
                         order_line_item.save()
 
-    if Product.DoesNotExist:
-        messages.error(request, ('Unknown item in shopping cart'))
-        order.delete()
-        return redirect(reverse('shopping_bag'))
-
-            request.session['save_info'] = 'save-info' in request.POST
-            return redirect(reverse('checkout_success', args=[order.order_number]))
+                except Product.DoesNotExist:
+                    messages.error(request, ('Unknown item in shopping cart'))
+                    order.delete()
+                    return redirect(reverse('shopping_bag'))
+                    request.session['save_info'] = 'save-info' in request.POST
+                    return redirect(reverse('checkout_success', args=[order.order_number]))
         else:
             messages.error(request, 'There was an error with this form. Please try again')
     else:
