@@ -194,6 +194,6 @@ STRIPE_WH_SECRET = os.getenv('STRIPE_WH_SECRET', '')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-CSRF_TRUSTED_ORIGINS=['https://8000-erincunning-projectport-5owj50gunip.ws-eu108.gitpod.io']
+CSRF_TRUSTED_ORIGINS=['https://8000-erincunning-projectport-b8w42e8yo8h.ws-eu108.gitpod.io/']
 
 APPEND_SLASH=False
