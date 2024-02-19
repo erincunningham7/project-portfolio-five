@@ -64,7 +64,7 @@
             </div>
             <div class="col-12 col-lg-4 custom-border py-4">
                 <p>Please add your details:</p>
-                <form class="checkout-form mt-2" id="checkout-form" method="POST" action="{% url 'checkout' %}">
+                <form class="order-form mt-2" id="checkout-form" method="POST" action="{% url 'checkout' %}">
                     {% csrf_token %}
                     <fieldset class="rounded px-3 mb-5">
                         <legend">Details</legend>
