@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from django.contrib import messages
 from .models import UserProfile
 from .forms import UserProfileForm
+from checkout.models import Order
 
 # Create your views here 
 def profile(request):
@@ -24,4 +25,20 @@ def profile(request):
         'on_profile_page': True
     }
 
+    return render(request, template, context)
+
+def order_history(request, pk):
+    ''' Renders order history '''
+    order = get_object_or_404(Order, pk = pk)
+
+    messages.info(request, (
+        f'This is a past confirmation of your order. '
+        'A confirmation email has been sent.'
+    ))
+
+    template = 'checkout/checkout_success.html'
+    context = {
+        'order': order,
+        'from_profile': True,
+    }
     return render(request, template, context)

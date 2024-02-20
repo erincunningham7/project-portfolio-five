@@ -181,12 +181,21 @@
         </div>
         <div class="row d-flex justify-content-center mt-5">
             <div class="col-10">
+                {% if from_profile %}
+                <a href="{% url 'profile' %}" class="btn btn-black rounded-0 my-2">
+                    <span class="icon mr-2">
+                        <i class="fas fa-angle-left"></i>
+                    </span>
+                    <span class="text-uppercase">Back to Profile</span>
+                </a>
+                {% else %}
                 {% if order_history %}
                 <button class="btn btn-gray" onclick="history.back()">Go back</button>
                 {% else %}
                 <a href="{% url 'products' %}" class="btn btn-green">Continue Shopping</a>
                 {% endif %}
             </div>
+            {% endif %}
         </div>
     </div>
     </div>
