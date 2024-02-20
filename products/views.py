@@ -1,5 +1,6 @@
 from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from .models import Product, Category, Brand
 from .forms import ProductForm
@@ -52,6 +53,7 @@ def product_info(request, product_id):
 
     return render(request, 'products/product_info.html', context)
 
+@login_required
 def add_product(request):
     '''A view to add products '''
     if not request.user.is_superuser:
@@ -74,6 +76,7 @@ def add_product(request):
 
     return render(request, template, context)
 
+@login_required
 def edit_product(request, pk):
     '''A view to edit products '''
     if not request.user.is_superuser:
@@ -101,8 +104,13 @@ def edit_product(request, pk):
     }
     return render(request, 'products/edit_a_product.html', context)
 
+@login_required
 def delete_product(request, pk):
     """ A view to delete a product """
+    if not request.user.is_superuser:
+        messages.error(request, 'You need admin rights to access this page')
+        return redirect(reverse('home'))
+
     product = get_object_or_404(Product, pk=pk)
     product.delete()
     messages.success(request, f'{product.title} deleted successfully')
