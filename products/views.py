@@ -3,6 +3,8 @@ from django.contrib import messages
 from django.db.models import Q
 from .models import Product, Category, Brand
 from .forms import ProductForm
+from checkout.forms import OrderStatusForm
+from checkout.models import Order, OrderStatus
 
 # Create your views here.
 def all_products(request):
@@ -50,16 +52,6 @@ def product_info(request, product_id):
 
     return render(request, 'products/product_info.html', context)
 
-# def add_product(request):
-#     """ Add a product to the store """
-#     form = ProductForm()
-#     template = 'products/add_product.html'
-#     context = {
-#         'form': form,
-#     }
-
-#     return render(request, template, context)
-
 def add_product(request):
     '''A view to add products '''
     if not request.user.is_superuser:
@@ -81,3 +73,30 @@ def add_product(request):
     }
 
     return render(request, template, context)
+
+def edit_product(request, product_id):
+    '''A view to edit products '''
+    if not request.user.is_superuser:
+        messages.error(request, 'You need admin rights to access this page')
+        return redirect('home')
+
+    product = get_object_or_404(Product, pk=product_id)
+
+    if request.method == 'POST':
+        form = ProductForm(request.POST, request.FILES, instance=product)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Product successfully updated')
+            return redirect(reverse('product_info', args=[product.id]))
+        else:
+            messages.error(request, 'Invalid form! Please try again.')
+    else:
+        form = ProductForm(instance=product)
+        messages.info(request, f'You are editing {product.title}')
+
+    context = {
+        'edit': True,
+        'form': form,
+        'product': product,
+    }
+    return render(request, 'products/edit_a_product.html', context)
