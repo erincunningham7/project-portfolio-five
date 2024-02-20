@@ -74,13 +74,13 @@ def add_product(request):
 
     return render(request, template, context)
 
-def edit_product(request, product_id):
+def edit_product(request, pk):
     '''A view to edit products '''
     if not request.user.is_superuser:
         messages.error(request, 'You need admin rights to access this page')
         return redirect('home')
 
-    product = get_object_or_404(Product, pk=product_id)
+    product = get_object_or_404(Product, pk=pk)
 
     if request.method == 'POST':
         form = ProductForm(request.POST, request.FILES, instance=product)
@@ -100,3 +100,10 @@ def edit_product(request, product_id):
         'product': product,
     }
     return render(request, 'products/edit_a_product.html', context)
+
+def delete_product(request, pk):
+    """ A view to delete a product """
+    product = get_object_or_404(Product, pk=pk)
+    product.delete()
+    messages.success(request, f'{product.title} deleted successfully')
+    return redirect(reverse('products'))
