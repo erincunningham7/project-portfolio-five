@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
 from pathlib import Path
+from django_countries.widgets import LazyChoicesMixin
 import os
 import dj_database_url
 if os.path.isfile('env.py'):
@@ -198,3 +199,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CSRF_TRUSTED_ORIGINS=['https://8000-erincunning-projectport-b8w42e8yo8h.ws-eu108.gitpod.io']
 
 APPEND_SLASH=False
+
+LazyChoicesMixin.get_choices = lambda self: self._choices
+LazyChoicesMixin.choices = property(LazyChoicesMixin.get_choices, LazyChoicesMixin.set_choices)
