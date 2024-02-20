@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
 from .models import Product, Category, Brand
+from .forms import ProductForm
 
 # Create your views here.
 def all_products(request):
@@ -48,3 +49,35 @@ def product_info(request, product_id):
     }
 
     return render(request, 'products/product_info.html', context)
+
+# def add_product(request):
+#     """ Add a product to the store """
+#     form = ProductForm()
+#     template = 'products/add_product.html'
+#     context = {
+#         'form': form,
+#     }
+
+#     return render(request, template, context)
+
+def add_product(request):
+    '''A view to add products '''
+    if not request.user.is_superuser:
+        messages.error(request, 'You need admin rights to access this page')
+        return redirect('home')
+
+    form = ProductForm()
+    if request.method == 'POST':
+        form = ProductForm(request.POST, request.FILES)
+        if form.is_valid():
+            product = form.save()
+            messages.success(request, 'Product added successfully.')
+            return redirect('product', product.id)
+        else:
+            messages.error(request, 'Invalid form. Try again')
+    template = 'products/add_product.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)
