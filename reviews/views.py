@@ -13,6 +13,7 @@ def add_review(request, pk):
     """
     product = get_object_or_404(Product, pk=pk)
     user = request.user.userprofile
+    redirect_url = request.POST.get('redirect_url')
     if request.method == 'POST':
         form = UserReviewForm(request.POST)
 
@@ -26,7 +27,7 @@ def add_review(request, pk):
             messages.error(
                 request, 'There was an error submitting your form. Please try again.'
             )
-    return redirect('product', pk)
+    return redirect(redirect_url)
 
 
 @login_required
