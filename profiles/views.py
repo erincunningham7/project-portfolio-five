@@ -27,6 +27,7 @@ def profile(request):
 
     return render(request, template, context)
 
+
 def order_history(request, pk):
     ''' Renders order history '''
     order = get_object_or_404(Order, pk = pk)

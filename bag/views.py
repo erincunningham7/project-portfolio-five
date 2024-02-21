@@ -8,6 +8,7 @@ def shopping_bag(request):
 
     return render(request, 'bag/bag.html')
 
+
 def add_to_bag(request, item_id):
     """
     A view that handles adding items to cart
@@ -26,6 +27,7 @@ def add_to_bag(request, item_id):
 
     request.session['bag'] = bag
     return redirect(redirect_url)
+
 
 def update_bag(request, item_id):
     """Change the quantity of bag items"""

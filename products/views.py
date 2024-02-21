@@ -53,6 +53,7 @@ def product_info(request, product_id):
 
     return render(request, 'products/product_info.html', context)
 
+
 @login_required
 def add_product(request):
     '''A view to add products '''
@@ -75,6 +76,7 @@ def add_product(request):
     }
 
     return render(request, template, context)
+
 
 @login_required
 def edit_product(request, pk):
@@ -103,6 +105,7 @@ def edit_product(request, pk):
         'product': product,
     }
     return render(request, 'products/edit_a_product.html', context)
+
 
 @login_required
 def delete_product(request, pk):

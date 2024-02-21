@@ -32,6 +32,7 @@ def cache_checkout_data(request):
             processed right now. Please try again later.')
         return HttpResponse(content=e, status=400)
 
+
 def checkout(request):
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
@@ -124,6 +125,7 @@ def checkout(request):
         'client_secret': intent.client_secret,
     }
     return render(request, template, context)
+
 
 def checkout_success(request, order_number):
     """
