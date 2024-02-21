@@ -16,7 +16,11 @@
                 <form class="mt-3" action="{% url 'contact' %}" method="POST" id="contact-form">
                     {% csrf_token %}
                     {{ form|crispy }}
-                    <button class="btn btn-lg fw-bold float-right" type="submit">Send</button>
+                    <!-- <button class="btn btn-lg fw-bold float-right" type="submit">Send</button> -->
+                    <div class="submit-button text-right mt-5 mb-2">
+                        <a href="{% url 'success' %}" class="btn btn-green">
+                            <span class="font-weight-bold">Send</span>
+                        </a>
                 </form>
             </div>
 {% endblock %}
