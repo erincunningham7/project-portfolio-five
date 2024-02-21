@@ -122,3 +122,22 @@ body {
         height: 284px;
     }
 }
+
+/* footer */
+#footer {
+    background-color: var(--light-orangeorange);
+    margin-top: auto;
+}
+
+#social-links a {
+    text-decoration: none;
+}
+
+#social-links a i {
+    color: var(--white);
+    font-size: 30px;
+}
+
+#social-links a i:hover {
+    color: var(--dark-gray);
+}
