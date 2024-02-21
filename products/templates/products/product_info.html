@@ -73,6 +73,34 @@
                         </div>
                 </form>
             </div>
+            <div id="reviews">
+                {% if user.is_authenticated %}
+                <h5>Add Review</h5>
+                {% include 'reviews/add_review.html' %}
+                {% else %}
+                <p>Please <a href="{% url 'account_login' %}">Log In</a> to submit a review</p>
+                {% endif %}
+                <div class="row">
+                    {% if reviews %}
+                    <h5>Reviews:</h5>
+                    {% for review in reviews %}
+                    <div class="col-12 col-md-8">
+                        <div class="card mb-3">
+                            <div class="card-body">
+                                <small>{{ review.created }}</small>
+                                <hr>
+                                <p class="card-text">{{ review.review }}</p>
+                            </div>
+                            {% if request.user.userprofile == review.user or request.user.is_superuser %}
+                            <div class="review-actions d-flex">
+                                <div class="delete-review">
+                                    <a href="{% url 'delete_review' review.id %}" class="btn btn-sm btn-green">Delete</a>
+                                </div>
+                                <div class="edit-review">
+                                    <a href="{% url 'edit_review' review.id %}" class="btn btn-sm btn-green">Edit</a>
+                                </div>
+                            </div>
+                            {% endif %}
         </div>
     </div>
 </div>
