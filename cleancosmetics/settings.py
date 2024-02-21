@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'bag',
     'checkout',
     'profiles',
+    'contact',
     'crispy_forms',
 ]
 
@@ -206,7 +207,8 @@ LazyChoicesMixin.choices = property(LazyChoicesMixin.get_choices, LazyChoicesMix
 # Email settings
 if 'DEVELOPMENT' in os.environ:
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-    DEFAULT_FROM_EMAIL = 'boutiqueado@example.com'
+    DEFAULT_FROM_EMAIL = 'cleancosmetics@example.com'
+    NOTIFY_EMAIL = "cleancosmetics@example.com"
 else:
     EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
     EMAIL_USE_TLS = True
