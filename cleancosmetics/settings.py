@@ -28,7 +28,7 @@ TEMPLATES_DIR = TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['8000-erincunning-projectport-b8w42e8yo8h.ws-eu108.gitpod.io','.herokuapp.com']
 
@@ -68,9 +68,6 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'cleancosmetics.urls'
-
-# CRISPY_TEMPLATE_PACK = 'Bootstrap5'
-# CRISPY_TEMPLATE_PACK = 'uni_form'
 
 TEMPLATES = [
     {
@@ -114,38 +111,20 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 ACCOUNT_AUTHENTICATION_METHOD = 'username_email'
 ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
 ACCOUNT_EMAIL_REQUIRED = True
-# ACCOUNT_EMAIL_NOTIFICATIONS = True
-# ACCOUNT_SESSION_REMEMBER = True
 ACCOUNT_SIGNUP_EMAIL_ENTER_TWICE = True
 ACCOUNT_SIGNUP_PASSWORD_ENTER_TWICE = True
 ACCOUNT_UNIQUE_EMAIL = True
 ACCOUNT_USERNAME_MIN_LENGTH = 3
-# ACCOUNT_USER_MODEL_EMAIL_FIELD = 'Enter email'
-# ACCOUNT_USER_MODEL_USERNAME_FIELD = 'Enter username'
 LOGIN_URL = '/accounts/login'
 LOGIN_REDIRECT_URL = '/'
 
 WSGI_APPLICATION = 'cleancosmetics.wsgi.application'
 
-
 # Database
-# https://docs.djangoproject.com/en/5.0/ref/settings/#databases
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
 
 DATABASES = {
     'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
 }
-
-# DATABASE_URL = os.getenv('DATABASE_URL')
-# DATABASES = {
-#     'default': dj_database_url.config(),
-# }
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
@@ -165,7 +144,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/5.0/topics/i18n/
 
@@ -176,7 +154,6 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 
 USE_TZ = True
-
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
