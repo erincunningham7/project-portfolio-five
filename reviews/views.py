@@ -4,16 +4,17 @@ from django.contrib.auth.decorators import login_required
 from products.models import Product
 from .forms import UserReviewForm
 from .models import UserReview
+from django.urls import reverse
 
 # Create your views here.
 @login_required
-def add_review(request, pk):
+def add_review(request, product_id):
     """
     A view that handles adding a product review
     """
-    product = get_object_or_404(Product, pk=pk)
+    product = get_object_or_404(Product, id=product_id)
     user = request.user.userprofile
-    redirect_url = request.POST.get('redirect_url')
+    # redirect_url = request.POST.get('redirect_url')
     if request.method == 'POST':
         form = UserReviewForm(request.POST)
 
@@ -27,15 +28,19 @@ def add_review(request, pk):
             messages.error(
                 request, 'There was an error submitting your form. Please try again.'
             )
-    return redirect(redirect_url)
-
+        return redirect(reverse('product_info', args=[product_id]))
+    else:
+        form = UserReviewForm()
+    # return redirect(redirect_url)
+    context = {'product': product, 'form': form}
+    return render(request, 'reviews/add_review.html', context)
 
 @login_required
-def update_review(request, pk):
+def update_review(request, product_id):
     """
     A view to handle updating a product review
     """
-    review = get_object_or_404(UserReview, pk=pk)
+    review = get_object_or_404(UserReview, product_id)
     product = review.product
     form = UserReviewForm(instance=review)
 
@@ -61,11 +66,11 @@ def update_review(request, pk):
 
 
 @login_required
-def delete_review(request, pk):
+def delete_review(request, product_id):
     """
     A view to handle deleting a product review
     """
-    review = get_object_or_404(UserReview, pk=pk)
+    review = get_object_or_404(UserReview, product_ids)
     prdouct = review.product
 
     if request.method == 'POST':
