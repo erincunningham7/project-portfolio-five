@@ -7,13 +7,23 @@ from .models import UserReview
 from django.urls import reverse
 
 # Create your views here.
-def reviews_list(request):
+def reviews_list(request, product_id):
     """
     A view that handles displaying the reviews page
     """
+    review = get_object_or_404(UserReview, id=product_id)
+    product = review.product
     reviews = UserReview.objects.all()
+
+    if review > 0:
+        messages.error(
+                request, 'There are no reviews available at this time.'
+            )
+    return redirect(reverse('product_info', args=[product_id]))
+
     template_name = 'reviews/reviews.html'
-    context = {'reviews': reviews}
+    context = {'reviews': reviews, 'product': product,}
+
     return render(request, template_name, context)
 
 @login_required
@@ -49,7 +59,7 @@ def update_review(request, product_id):
     """
     A view to handle updating a product review
     """
-    review = get_object_or_404(UserReview, product_id)
+    review = get_object_or_404(UserReview, id=product_id)
     product = review.product
     form = UserReviewForm(instance=review)
 
@@ -79,8 +89,8 @@ def delete_review(request, product_id):
     """
     A view to handle deleting a product review
     """
-    review = get_object_or_404(UserReview, product_id)
-    prdouct = review.product
+    review = get_object_or_404(UserReview, id=product_id)
+    product = review.product
 
     if request.method == 'POST':
         user = request.user.userprofile
@@ -91,7 +101,8 @@ def delete_review(request, product_id):
             except ObjectDoesNotExist:
                 messages.error(
                     request, 'This review does not exist.')
-            return redirect('product', product.id)
+        
+    return redirect(reverse('product_info', args=[product_id]))
 
     template = 'reviews/delete_review.html'
     context = {
