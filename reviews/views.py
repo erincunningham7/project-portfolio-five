@@ -7,6 +7,15 @@ from .models import UserReview
 from django.urls import reverse
 
 # Create your views here.
+def reviews_list(request):
+    """
+    A view that handles displaying the reviews page
+    """
+    reviews = UserReview.objects.all()
+    template_name = 'reviews/reviews.html'
+    context = {'reviews': reviews}
+    return render(request, template_name, context)
+
 @login_required
 def add_review(request, product_id):
     """
@@ -70,7 +79,7 @@ def delete_review(request, product_id):
     """
     A view to handle deleting a product review
     """
-    review = get_object_or_404(UserReview, product_ids)
+    review = get_object_or_404(UserReview, product_id)
     prdouct = review.product
 
     if request.method == 'POST':
