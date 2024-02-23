@@ -10,9 +10,16 @@
           <hr>
        </div>
     </div>
+<div class="user-rating">
+        <h6 class="ms-2">{{ review.user }}</h6>
+        <div class="rating ms-2">
+            {% for i in review.get_rating_range %}
+            <i class="fa-solid fa-star" style="color:#f0bc00"></i>
+            {% endfor %}
+        </div>
 <div class="row">
     <div class="col-12 col-md-8">
-        <form class="mb-3" action="{% url 'add_review' product.id %}" method="POST">
+        <form class="action="{% url 'add_review' product.id %}" method="POST">
             {% csrf_token %}
             {{ form|crispy }}
             <button type="submit" class="btn btn-green">Submit</button>
