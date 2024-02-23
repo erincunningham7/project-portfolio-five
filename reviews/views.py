@@ -11,19 +11,16 @@ def reviews_list(request, product_id):
     """
     A view that handles displaying the reviews page
     """
-    review = get_object_or_404(UserReview, id=product_id)
-    product = review.product
-    reviews = UserReview.objects.all()
-
-    if review > 0:
+    product_reviews = UserReview.objects.filter(product_id=product_id)
+    if not product_reviews.exists():
         messages.error(
-                request, 'There are no reviews available at this time.'
-            )
-    return redirect(reverse('product_info', args=[product_id]))
+            request, 'There are no reviews available at this time.'
+        )
+        return redirect('product_info', product_id=product_id)
 
+    product = product_reviews.first().product
     template_name = 'reviews/reviews.html'
-    context = {'reviews': reviews, 'product': product,}
-
+    context = {'reviews': product_reviews, 'product': product}
     return render(request, template_name, context)
 
 @login_required

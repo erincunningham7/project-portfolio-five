@@ -34,7 +34,7 @@
          </small>
          {% endif %}
          <hr>
-         <a href="{% url 'reviews_list' %}" class="review-link text-black">Reviews</a>
+         <a href="{% url 'reviews_list' product.id %}" class="review-link text-black">Reviews</a>
          <p class="product-info mt-3">{{ product.description }}</p>
          <form class="form" action="{% url 'add_to_bag' product.id %}" method="POST">
             {% csrf_token %}
