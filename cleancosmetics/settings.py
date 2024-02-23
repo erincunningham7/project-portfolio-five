@@ -28,7 +28,7 @@ TEMPLATES_DIR = TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = 'DEVELOPMENT' in os.environ
 
 ALLOWED_HOSTS = ['8000-erincunning-projectport-b8w42e8yo8h.ws-eu108.gitpod.io','.herokuapp.com']
 
@@ -176,7 +176,7 @@ STRIPE_WH_SECRET = os.getenv('STRIPE_WH_SECRET', '')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-CSRF_TRUSTED_ORIGINS=['https://8000-erincunning-projectport-b8w42e8yo8h.ws-eu108.gitpod.io']
+CSRF_TRUSTED_ORIGINS=['https://8000-erincunning-projectport-b8w42e8yo8h.ws-eu108.gitpod.io', 'https://clean-cosmetics-ecommerce-app-ddc58ad89794.herokuapp.com']
 
 APPEND_SLASH=False
 

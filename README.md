@@ -146,6 +146,12 @@ The main font used across the site is the Playfair Display font. The Lato font i
 
 ### Agile Methodology
 
+This is how I planned out my user stories 
+
+![Gantt Chart](static/images/gantt-chart.png)
+
+
+
 #### Overview
 
 #### User Stories Issues
