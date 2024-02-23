@@ -3,11 +3,29 @@
 {% load static %}
 
 {% block content %}
+{% for product in products %}
+<section class="container d-flex justify-content-center mt-3">
+    <div class="row align-center column-gap-3">
+        <!--Card Start-->
+        <div class="card col-sm-1 col-4" style="width: 18rem">
+            <img src="{{ MEDIA_URL }}{{ product.image }}" class="card-img-top" alt="{{ product.title }}">
+            <div class="card-body">
+                <h5 class="card-title">{{ product.title }}</h5>
+                <p>{{ product.brand }}</p>
+                <p>€{{ product.price }}</p>
+                <p class="card-text">{{ product.description }}</p>
+                <a href="{% url 'product_info' product.id %}" class="btn btn-primary">Product Details</a>
+            </div>    
+        </div>
+        <!--End Card-->
+    </div>
+</section>
+{% endfor %}
+{% endblock %}
 
-<div class="row">
-    <div class="product-container col-10 offset-1">
+    <!-- <div class="product-container col-10 offset-1">
         <!-- <div class="row mt-1 mb-2"> -->
-            <div class="row">
+            <!-- <div class="row">
             {% for product in products %}
             <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
                 <div class="card" style="width: 18rem;">
@@ -33,8 +51,7 @@
 
                 {% endif %}
                 </div>
-            </div>
+            </div> -->
         <!-- </div> -->
-    </div>
-</div>
-{% endblock %}
+    <!-- </div>
+</div>  -->

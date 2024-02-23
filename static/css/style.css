@@ -31,20 +31,6 @@ body {
     font-family: 'Lato', serif;
 }
 
-/* Products */
-.image-container {
-    overflow: hidden;
-    position: relative;
-}
-.product-card .image-container a.image {
-    display: block;
-}
-.product-card .image-container img {
-    padding-left: 30%;
-    width: 100%;
-    height: 330px;
-    object-fit: cover;
-}
 
 .shop-btn {
     box-shadow: 1px 9px 26px -4px rgba(0, 0, 0, 0.66);
