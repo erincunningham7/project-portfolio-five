@@ -14,7 +14,7 @@ RATING = (
 class UserReview(models.Model):
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
     user = models.ForeignKey(UserProfile, on_delete=models.CASCADE)
-    rating = models.IntegerField(choices=RATING, default=None)
+    rating = models.IntegerField(choices=RATING, default='', null=True)
     created = models.DateTimeField(auto_now_add=True)
     review = models.TextField()
 
