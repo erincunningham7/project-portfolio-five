@@ -6,5 +6,3 @@ from .forms import ContactUs
 class ContactModel(models.Model):
     class Meta:
         ordering = [-1]
-    
-
