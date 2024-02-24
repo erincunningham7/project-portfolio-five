@@ -25,5 +25,3 @@ class ContactView(FormView):
         contact_message = f"New contact message from {full_name} at {email}, {subject}: {message}"
         send_mail(subject="New contact form submission", message=full_message, from_email=settings.DEFAULT_FROM_EMAIL, recipient_list=[settings.NOTIFY_EMAIL],)
         return super(ContactView, self).form_valid(form)
-
-        print(contact_message)
