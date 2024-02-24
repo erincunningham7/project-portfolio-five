@@ -84,7 +84,11 @@ Clean Cosmetics is an ecommerce application specifically design to facilitate co
 
 20. As a site user I can filter the products by category so that quickly find what I'm looking for/intending to buy.
 
-### User Experience
+21. As a site user I can contact the store so that raise concerns or simply ask for help,
+
+22. As a site user I can browse the trending topics page so that read interesting topics about what is happening in the beauty industry.
+
+23. As a registered I can review products so that I can express my opinion on products.
 
 ### Site Goals
 
@@ -142,23 +146,65 @@ The main font used across the site is the Playfair Display font. The Lato font i
 
 ### Database Schema
 
+![Image]()
+
+1. User:
+The User model is a part of the Django Allauth library. The model comes with predefined fields as standard,for example, username, email, name, password, etc. This model is used for user authentication, hence why changes directly to this model are not advisory. The User model is connected to the UserProfile model with one to one relationship.
+
+2. UserProfile:
+The UserProfile model is a custom custom-created model to handle the user profile details. Signals are used to reflect the changes between the User and UserProfile models.
+
+3. Category
+This model was created for the purpose of defining categories for the products
+
+4. Product
+This model was created to add products
+
+5. Brand
+This model stores the brand of each category of product
+
+6. Topic
+This is a custom product model. It is designed to form the fields of a blog post.
+
+7. UserReview 
+This model stores the user's reviews for a product. It is connected to the UserProfile and the Book models as a ForeignKey
+
+8. Order 
+This model holds all the information of the user's order. It is connected to the UserProfile as a ForeignKey.
+
+9. OrderStatus
+This model is connected to the Order model with OneToOneField. When an Order is created a signal creates OrderStatus. The default value is 'in progress' with additional options of Completed and Cancelled. 
+
+10. OrderLineItem
+This model is connected to the Order and Book as a ForeignKey. It is created for each item in the order
+
 ### Wireframes
 
 ### Agile Methodology
 
-This is how I planned out my user stories 
+#### Overview
+
+This is how I planned out my user stories with the agile methodology in mind I created a gantt chart so that I could have a visual representation of my project plan.
 
 ![Gantt Chart](static/images/gantt-chart.png)
 
-
-
-#### Overview
-
 #### User Stories Issues
+
+The structure of the user story issue consists of the user story, acceptance criteria, and tasks that outline the steps that are required for this issue to be completed.
+
+![User Story]()
 
 #### MoSCoW prioritization
 
+This prioritization technique was used to prioritize the features and requirements of the project based on their importance. The acronym "MoSCoW" stands for "Must have, Should have, Could have, and Won't have." Each category helps to prioritize features to guide the development process and ensure that the most essential elements are targeted first.
+
+![MoSCoW]()
+
 #### Github Project
+
+The project was created using a basic Kanban Board structure, divided into columns Todo, In Progress and Done.. This setup provides a clear and organized way to track the status of tasks and visualize and manage the workflow.
+
+![Project]()
 
 ## Features
 
