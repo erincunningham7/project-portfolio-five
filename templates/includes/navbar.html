@@ -63,26 +63,20 @@
         </div>
     </div>
     <div class="navbar-collapse" id="main-nav">
-        <ul class="nav nav-pills navbar-right text-black>
-            <li class="nav-item d-block d-md-none">
-                <a class="logo-font font-weight-bold nav-link text-black mr-5" href="{% url 'home' %}">
+        <ul class="nav nav-pills">
+            <li class="nav-item">
+                <a class="logo-font font-weight-bold nav-link text-black" href="{% url 'home' %}">
                     Home
                 </a>
             </li>
-            <ul class="nav nav-pills navbar-right text-black>
-                <li class="nav-item d-block d-md-none">
-                    <a class="logo-font font-weight-bold nav-link text-black mr-5" href="{% url 'products' %}">
+            <ul class="nav nav-pills">
+                <li class="nav-item">
+                    <a class="logo-font font-weight-bold nav-link text-black" href="{% url 'products' %}">
                         All Products
                     </a>
                 </li>
-            <!-- <li class="nav-item dropdown">
-                <a class="logo-font font-weight-bold nav-link text-black mr-10" href="" aria-haspopup="true" aria-expanded="false"
-                    data-bs-toggle="dropdown">All Products</a>
-                <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
-                    <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
-                </div>
-            </li> -->
-            <li class="nav-item dropdown">
+            <ul class="nav nav-pills">
+            <li class="nav nav-item dropdown">
                 <a class="logo-font font-weight-bold nav-link text-black" href="#" aria-haspopup="true" aria-expanded="false"
                     data-bs-toggle="dropdown">Makeup</a>
                 <div class="dropdown-menu border-0" aria-labelledby="makeup-link">
@@ -93,6 +87,8 @@
                     <a href="{% url 'products' %}?category=palettes" class="dropdown-item">Palettes</a>
                 </div>
             </li>
+            </ul>
+            <ul class="nav nav-pills">
             <li class="nav-item dropdown">
                 <a class="logo-font font-weight-bold nav-link text-black" href="#" aria-haspopup="true" aria-expanded="false"
                     data-bs-toggle="dropdown">Skincare</a>
@@ -105,6 +101,8 @@
                     <a href="{% url 'products' %}?category=skincare_tools" class="dropdown-item">Skincare Tools</a>
                 </div>
             </li>
+            </ul>
+            <ul class="nav nav-pills">
             <li class="nav-item dropdown">
                 <a class="logo-font font-weight-bold nav-link text-black" href="#" id="bath-and-body-link" aria-haspopup="true"
                     aria-expanded="false" data-bs-toggle="dropdown">Bath &amp; Body</a>
@@ -114,16 +112,17 @@
                     <a href="{% url 'products' %}?category=body_moisturisers" class="dropdown-item">Body Moisturisers</a>
                 </div>
             </li>
-            <ul class="nav nav-pills navbar-right text-black>
-            <li class="nav-item d-block d-md-none">
-                <a class="logo-font font-weight-bold nav-link text-black mr-5" href="{% url 'contact' %}">
+            </ul>
+            <ul class="nav nav-pills">
+            <li class="nav-item">
+                <a class="logo-font font-weight-bold nav-link text-black" href="{% url 'contact' %}">
                     Contact Us
                 </a>
             </li>
             </ul>
-            <ul class="nav nav-pills navbar-right text-black>
-                <li class="nav-item d-block d-md-none">
-                    <a class="logo-font font-weight-bold nav-link text-black mr-5" href="{% url 'topics' %}">
+            <ul class="nav nav-pills">
+                <li class="nav-item">
+                    <a class="logo-font font-weight-bold nav-link text-black" href="{% url 'topics' %}">
                         Trending Topics
                     </a>
                 </li>
