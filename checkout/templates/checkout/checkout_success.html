@@ -9,7 +9,7 @@
 {% block content %}
 <section class="checkout-success">
     <div class="container">
-        <div class="row">
+        <div class="row g-0">
             <div class="col-12 custom-border text-center my-3 p-3">
                 {% if order_history %}
                 <h4 class="pb-3">Order placed on: {{ order.date }}</h4>
@@ -22,16 +22,16 @@
                 {% endif %}
             </div>
         </div>
-        <div class="row">
+        <div class="row g-0">
             <div class="col-12 col-lg-7">
                 <div class="order-confirmation-wrapper p-2 border">
-                    <div class="row">
+                    <div class="row g-0">
                         <div class="col">
                             <small class="text-muted">Order Info:</small>
                         </div>
                     </div>
 
-                    <div class="row">
+                    <div class="row g-0">
                         <div class="col-12 col-md-4">
                             <p class="mb-0 text-black font-weight-bold">Order Number</p>
                         </div>
@@ -40,7 +40,7 @@
                         </div>
                     </div>
 
-                    <div class="row">
+                    <div class="row g-0">
                         <div class="col-12 col-md-4">
                             <p class="mb-0 text-black font-weight-bold">Order Date</p>
                         </div>
@@ -49,14 +49,14 @@
                         </div>
                     </div>
 
-                    <div class="row">
+                    <div class="row g-0">
                         <div class="col">
                             <small class="text-muted">Order Details:</small>
                         </div>
                     </div>
 
                     {% for item in order.lineitems.all %}
-                    <div class="row">
+                    <div class="row g-0">
                         <div class="col-12 col-md-4">
                             <p class="small mb-0 text-black font-weight-bold">
                                 {{ item.product.name }}{% if item.product_size %} - Size {{ item.product.size|upper }}{% endif %}
@@ -68,12 +68,12 @@
                     </div>
                     {% endfor %}
 
-                    <div class="row">
+                    <div class="row g-0">
                         <div class="col-12 col-lg-6 delivery-details mt-4 mt-lg-0">
                             <small class="text-muted">Delivery Details</small>
                             <hr>
 
-                            <div class="row">
+                            <div class="row g-0">
                                 <div class="col-5">
                                     <p>Name:</p>
                                 </div>
@@ -82,7 +82,7 @@
                                 </div>
                             </div>
 
-                            <div class="row">
+                            <div class="row g-0">
                                 <div class="col-5">
                                     <p>Phone:</p>
                                 </div>
@@ -91,7 +91,7 @@
                                 </div>
                             </div>
 
-                            <div class="row">
+                            <div class="row g-0">
                                 <div class="col-5">
                                     <p>Street Address 1:</p>
                                 </div>
@@ -101,7 +101,7 @@
                             </div>
 
                             {% if order.street_address2 %}
-                            <div class="row">
+                            <div class="row g-0">
                                 <div class="col-5">
                                     <p>Street Address 2:</p>
                                 </div>
@@ -112,7 +112,7 @@
                             {% endif %}
 
                             {% if order.county %}
-                            <div class="row">
+                            <div class="row g-0">
                                 <div class="col-5">
                                     <p>County:</p>
                                 </div>
@@ -123,7 +123,7 @@
                             {% endif %}
 
                             {% if order.postcode %}
-                            <div class="row">
+                            <div class="row g-0">
                                 <div class="col-5">
                                     <p>Postcode:</p>
                                 </div>
@@ -133,7 +133,7 @@
                             </div>
                             {% endif %}
 
-                            <div class="row">
+                            <div class="row g-0">
                                 <div class="col-5">
                                     <p>Country:</p>
                                 </div>
@@ -142,13 +142,13 @@
                                 </div>
                             </div>
 
-                    <div class="row">
+                    <div class="row g-0">
                         <div class="col">
                             <small class="text-muted">Billing Info:</small>
                         </div>
                     </div>
 
-                    <div class="row">
+                    <div class="row g-0">
                         <div class="col-7">
                             <p>Order Total</p>
                         </div>
@@ -157,7 +157,7 @@
                         </div>
                     </div>
 
-                    <div class="row">
+                    <div class="row g-0">
                         <div class="col-7">
                             <p>Delivery</p>
                         </div>
@@ -166,7 +166,7 @@
                         </div>
                     </div>
 
-                    <div class="row">
+                    <div class="row g-0">
                         <div class="col-7">
                             <p>Grand Total</p>
                         </div>

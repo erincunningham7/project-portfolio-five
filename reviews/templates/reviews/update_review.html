@@ -3,14 +3,14 @@
 
 {% block content %}
 <div class="container" id="reviews">
-    <div class="row">
+    <div class="row g-0">
        <div class="col text-center">
           <hr>
           <h2>Edit Your Review</h2>
           <hr>
        </div>
     </div>
-<div class="row">
+<div class="row g-0">
     <div class="col-12 col-md-8">
         <form class="mb-3" action="{% url 'update_review' review.id %}" method="POST">
             {% csrf_token %}

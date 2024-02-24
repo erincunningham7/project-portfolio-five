@@ -17,10 +17,10 @@
                 <hr>
             </div>
         </div>
-        <div class="row">
+        <div class="row g-0">
             <div class="col-12 col-lg-6 order-lg-last mb-5">
                 <p>Order summary: <strong>{{ product_count }} Items</strong></p>
-                <div class="row">
+                <div class="row g-0">
                     <div class="col-7 offset-2">
                         <p class="mb-1 mt-0 small text-muted">Item</p>
                     </div>
@@ -29,7 +29,7 @@
                     </div>
                 </div>
                 {% for content in bag_content %}
-                <div class="row ">
+                <div class="row g-0">
                     <div class="col-2">
                             {% if item.product.image %}
                             <img class="w-100" src="{{ item.product.image.url }}" alt="{{ product.title }}">
@@ -49,7 +49,7 @@
                 {% endfor %}
                 <hr class="my-0">
                     <div class="container">
-                        <div class="row">
+                        <div class="row g-0">
                             <div class="col-sm">
                         <p class="my-0">Order Total:</p>
                         <p class="my-0">Delivery:</p>

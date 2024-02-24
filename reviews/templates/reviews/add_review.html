@@ -3,7 +3,7 @@
 
 {% block content %}
 <div class="container" id="reviews">
-    <div class="row">
+    <div class="row g-0">
        <div class="col text-center">
           <hr>
           <h2>Add Your Review</h2>
@@ -17,7 +17,7 @@
             <i class="fa-solid fa-star" style="color:#f0bc00"></i>
             {% endfor %}
         </div>
-<div class="row">
+<div class="row g-0">
     <div class="col-12 col-md-8">
         <form class="action="{% url 'add_review' product.id %}" method="POST">
             {% csrf_token %}
