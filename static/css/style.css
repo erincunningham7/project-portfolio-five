@@ -21,10 +21,6 @@ body {
     font-weight: 600;
 }
 
-.nav-link:hover {
-    color: var(--dark-green) !important;
-}
-
 /* Products */
 
 .product-info {
