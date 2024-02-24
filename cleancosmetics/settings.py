@@ -50,6 +50,8 @@ INSTALLED_APPS = [
     "allauth",
     "allauth.account",
     "allauth.socialaccount",
+
+    # Apps 
     "home",
     "products",
     "bag",
@@ -58,7 +60,11 @@ INSTALLED_APPS = [
     "contact",
     "reviews",
     "blog",
+
+    # Other
     "crispy_forms",
+    "cloudinary",
+    "cloudinary_storage",
 ]
 
 MIDDLEWARE = [
@@ -162,6 +168,10 @@ USE_TZ = True
 
 STATIC_URL = "/static/"
 STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"),)
+
+# Cloudinary settings
+DEFAULT_FILE_STORAGE = "cloudinary_storage.storage.MediaCloudinaryStorage"
+CLOUDINARY_URL = os.environ.get("CLOUDINARY_URL")
 
 MEDIA_URL = "media/"
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
