@@ -146,7 +146,7 @@ The main font used across the site is the Playfair Display font. The Lato font i
 
 ### Database Schema
 
-![Image]()
+![Entity Relationship Diagram](static/images/erd.png)
 
 1. User:
 The User model is a part of the Django Allauth library. The model comes with predefined fields as standard,for example, username, email, name, password, etc. This model is used for user authentication, hence why changes directly to this model are not advisory. The User model is connected to the UserProfile model with one to one relationship.
