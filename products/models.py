@@ -3,6 +3,9 @@ from django.db import models
 
 # Create your models here.
 class Category(models.Model):
+    """
+    Define the data fields for product category
+    """
     name = models.CharField(max_length=150)
     friendly_name = models.CharField(max_length=150, null=True, blank=True)
 
@@ -22,6 +25,9 @@ class Brand(models.Model):
 
 
 class Product(models.Model):
+    """
+    Define the data fields for a product
+    """
     title = models.CharField(max_length=255)
     brand = models.ForeignKey(Brand, on_delete=models.SET_NULL, null=True)
     category = models.ForeignKey(

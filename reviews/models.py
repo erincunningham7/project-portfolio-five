@@ -13,6 +13,9 @@ RATING = (
 
 
 class UserReview(models.Model):
+    """
+    Define the data fields for a review
+    """
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
     user = models.ForeignKey(UserProfile, on_delete=models.CASCADE)
     rating = models.IntegerField(choices=RATING, default="", null=True)

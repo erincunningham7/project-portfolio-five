@@ -15,6 +15,9 @@ STATUS = (
 
 
 class Order(models.Model):
+    """
+    Define the data fields for an order
+    """
     order_number = models.CharField(max_length=40, null=False, editable=False)
     user_profile = models.ForeignKey(
         UserProfile,
@@ -73,6 +76,9 @@ class Order(models.Model):
 
 
 class OrderLineItem(models.Model):
+    """
+    Define the data fields for an order line item
+    """
     order = models.ForeignKey(
         Order,
         null=False,

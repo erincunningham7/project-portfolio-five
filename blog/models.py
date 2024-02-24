@@ -5,6 +5,9 @@ STATUS = ((0, "Draft"), (1, "Publish"))
 
 
 class Topic(models.Model):
+    """
+    Define the data fields for a blog topic
+    """
     title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
     updated_on = models.DateTimeField(auto_now=True)

@@ -8,10 +8,18 @@ from django.conf import settings
 
 # Create your views here.
 class SuccessView(TemplateView):
+    """
+    Display the success template
+    """
+
     template_name = "contact/success.html"
 
 
 class ContactView(FormView):
+    """
+    Display the contact form
+    """
+
     form_class = ContactUs
     template_name = "contact/contact.html"
 
@@ -19,6 +27,9 @@ class ContactView(FormView):
         return reverse("contact")
 
     def contact(self, form):
+        """
+        Clean each field, layout the format of the message, use send_email to send the subject, message, from email, and recipient list
+        """
         full_name = form.cleaned_data.get("full_name")
         email = form.cleaned_data.get("email")
         subject = form.cleaned_data.get("subject")
