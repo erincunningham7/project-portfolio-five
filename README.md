@@ -208,6 +208,57 @@ The project was created using a basic Kanban Board structure, divided into colum
 
 ## Features
 
+#### Navbar
+The navbar was built using bootstrap 5 and is responsive. The search bar allows the users to search for products. The My Account drop down gives the user the option to log in or register. If the user is authenticated additional menu options are displayed like my profile and admin (if the user is a superuser). The shopping cart icon is a link to the shopping cart and it also displays the total of the items in the cart.
+The nav links allow the user to refine the products by category or to accesss the contact us page and the trending topcis blog.
+
+![Image]
+
+### Toasts
+Toasts from Bootstrap were implemented to provide customers with feedback in relation to their actions on the website.
+
+![toasts]()
+
+#### Footer
+The footer consist of links to social media.
+
+![footer]()
+
+### Home Page
+#### Hero Section
+The hero section is the beginning of the whole customer's journey. That is why I made it a priority to create appealing hero section. 
+The text on the left communicates the entire purpose of the site.
+The hero section image was carefully selected to display the nature element of the website and matches the colour scheme.
+This is then followed by call-to-action button Shop Now which invites the user to browse through the available products.
+
+![hero section]()
+
+### Products Page
+The products page renders all products to the user.
+
+![Image]()
+
+### Products Card
+The product card consist of an image of the product, title, brand and price.
+
+![Image]()
+
+### Single Products Page
+On the page's left side, a product image is displayed. On the right side, the description about the product is displayed. This includes the title, brand, price and reviews.
+If a user is authenticated they can access the add review page, edit review page. If it is an admin they can edit or delete the product itself.
+
+![Image]()
+
+### Edit review page
+This page allows the user to edit their review in the event they changed their mind. It renders prefilled with the original data. 
+
+![edit-review]()
+
+### Delete review confirmation
+This page asks the user for confirmation if they wish to delete their review
+
+![delete-review]()
+
 ## Testing
 
 ## Technologies And Languages
