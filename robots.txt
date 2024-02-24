@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /accounts/
+Disallow: /bag/
+Sitemap: https://clean-cosmetics-ecommerce-app-ddc58ad89794.herokuapp.com/sitemap.xml
