@@ -1,6 +1,6 @@
 # Project Portfolio Five: Clean Cosmetics
 
-[Link to live site](https://clean-cosmetics-ecommerce-app-ddc58ad89794.herokuapp.com/products/)
+[Link to live site](https://clean-cosmetics-ecommerce-app-ddc58ad89794.herokuapp.com/)
 
 Clean Cosmetics is an ecommerce application specifically design to facilitate commercial transactions, and involves an online transfer of information.
 
