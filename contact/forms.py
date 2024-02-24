@@ -1,6 +1,11 @@
 from django import forms
+from .models import Contact
 
-class ContactUs(forms.Form):
+class ContactUs(forms.ModelForm):
+    class Meta:
+        model = Contact
+        fields = '__all__'
+
     full_name = forms.CharField(
         widget=forms.TextInput(attrs={"placeholder": "Your Name"})
     )
