@@ -249,6 +249,11 @@ This page displays the product details and their corresponding reviews.
 
 ![reveiws](static/images/reveiws.png)
 
+### Add Review
+When an authenticated user logs in to the site and they click on a product card, they can see the review button which redirects them to the add review page. Here they can review and rate the selected product.
+
+![add-review](static/images/add-review.png)
+
 ### Contact Us Page
 The contact us displays a form for users to contact the admin.
 
@@ -264,35 +269,50 @@ This page renders a list of blog posts about the beauty industry, specifically r
 
 ![topics](static/images/trending-topics.png)
 
-## Topics Detail
+### Topics Detail
 The topics detail page opens up the post and the user can read it in full.
 
 ![topics detail](static/images/topics-info.png)
 
-## Sign In Page
+### Sign In Page
 The sign in page allows registered users and admins to sign in with their details.
 
 ![sign in](static/images/sign-in.png)
 
-## Sign Out Page
+### Sign Out Page
 The sign out page allows logged in users to sign out successfully, with a toast confirmation appearing afterwards.
 
 ![sign out](static/images/sign-out.png)
 
-## Sign Up Page
+### Sign Up Page
 The sign up page allows new clients to register.
 
 ![sign up](static/images/sign-up.png)
 
-## Forgot Password
+### Forgot Password
 This page allows registered users to reset their passwords via email.
 
 ![forgot password](static/images/forgot-password.png)
 
-## Password Reset Confirmation
+### Password Reset Confirmation
 The page confirms to users that an email has been sent to reset their password.
 
 ![password reset confirmed](static/images/password-reset.png)
+
+### My Profile
+The My Profile page is for registered users to access their order history and update their information if they wish.
+
+![profile](static/images/profile.png)
+
+### Admin Page
+The admin page allows admins only to add products to the site.
+
+![admin](static/images/admin.png)
+
+### Admin Edit/Delete Products
+When an admin is logged in to the site and they click on a product card, they can see the edit and delete options to edit or delete a product if they wish.
+
+![edit and delete](static/images/admin-edit-delete.png)
 
 ## Testing
 
