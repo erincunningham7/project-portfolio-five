@@ -27,12 +27,7 @@
                     {% for item in bag_content %}
                     <tr>
                         <td>
-                            <!-- <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}{{ item.product.image }}"
-                                alt="{{ product.title }}"> -->
-                        </td>
-                        <td>
                             <h5 class="mb-3"><strong>{{ item.product.title }}</strong></h5>
-                            <!-- <p class="mt-3"><strong>€ {{ item.product.price }}</strong></p> -->
                         </td>
                         <td>
                             <form class="form update-form" method="POST" action="{% url 'update_bag' item.item_id %}">

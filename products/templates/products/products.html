@@ -8,7 +8,7 @@
     <div class="row align-center column-gap-3">
         <!--Card Start-->
         <div class="card col-sm-1 col-4" style="width: 18rem">
-            <img src="{{ MEDIA_URL }}{{ product.image }}" class="card-img-top" alt="{{ product.title }}">
+            <img src="{{ product.image.url }}" class="card-img-top" alt="{{ product.title }}">
             <div class="card-body">
                 <h5 class="card-title">{{ product.title }}</h5>
                 <p>{{ product.brand }}</p>
