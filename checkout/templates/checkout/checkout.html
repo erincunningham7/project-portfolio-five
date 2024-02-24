@@ -11,7 +11,7 @@
 <section class="checkout-section">
     <div class="container mb-2">
         <div class="row d-flex justify-content-center">
-            <div class="col-12 custom-border py-4">
+            <div class="col-12 py-4">
                 <hr>
                 <h2 class="logo-font mb-4">Checkout</h2>
                 <hr>
@@ -31,7 +31,6 @@
                 {% for content in bag_content %}
                 <div class="row ">
                     <div class="col-2">
-                        <!--  -->
                             {% if item.product.image %}
                             <img class="w-100" src="{{ MEDIA_URL }}{{ product.image }}" alt="{{ product.title }}">
                             {% else %}
@@ -44,25 +43,26 @@
                         <p class="my-0 small text-muted">Qty: {{ content.quantity }}</p>
                     </div>
                     <div class="col-3 text-right">
-                        <p class="my-0 small text-muted">${{ content.product.price | calc_subtotal:content.quantity }}</p>
+                        <p class="my-0 small text-muted">€{{ content.product.price | calc_subtotal:content.quantity }}</p>
                     </div>
                 </div>
                 {% endfor %}
                 <hr class="my-0">
-                <div class="row text-black text-right custom-border py-4">
-                    <div class="col-7 offset-10">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm">
                         <p class="my-0">Order Total:</p>
                         <p class="my-0">Delivery:</p>
                         <p class="my-0">Grand Total:</p>
                     </div>
                     <div class="col-3">
-                        <p class="my-0">${{ total | floatformat:2 }}</p>
-                        <p class="my-0">${{ delivery | floatformat:2 }}</p>
-                        <p class="my-0"><strong>${{ grand_total | floatformat:2 }}</strong></p>
+                        <p class="my-0">€{{ total | floatformat:2 }}</p>
+                        <p class="my-0">€{{ delivery | floatformat:2 }}</p>
+                        <p class="my-0"><strong>€{{ grand_total | floatformat:2 }}</strong></p>
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-lg-4 custom-border py-4">
+            <div class="col-12 col-lg-4 py-4">
                 <p>Please add your details:</p>
                 <form class="order-form mt-2" id="checkout-form" method="POST" action="{% url 'checkout' %}">
                     {% csrf_token %}
@@ -80,6 +80,7 @@
                         {{ order_form.county|as_crispy_field }}
                         {{ order_form.postcode|as_crispy_field }}
                         {{ order_form.country|as_crispy_field }}
+                        
                         <div class="form-check form-check-inline float-right mr-0">
                             {% if user.is_authenticated %}
                             <label class="form-check-label" for="id-save-info">Save this delivery information to my
