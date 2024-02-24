@@ -275,6 +275,14 @@ This page asks the user for confirmation if they wish to delete their review
 
 ### Stripe setup
 
+- Log in to [Stripe](https://stripe.com/en-ie)
+- Navigate to developers section (link located at the top right)
+- Go to API keys tab and copy the values of PUBLIC_KEY and SECRET_KEY and add them to your env.py file
+- Navigate to the Webhooks page from the tab in the menu at the top and click on add endpoint.
+- This section requires a link to the deployed application. The link should look like this https://your_website.herokuapp.com/checkout/wh/ 
+- Choose the events the webhook should recieve and add endpoint.
+- When the application is deployed, run a test transaction to ensure the webhooks are working. The events chan be checked in the webhooks page.
+
 ### Deployment on Heroku
 
 ### Creating a fork
