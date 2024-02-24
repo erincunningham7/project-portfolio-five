@@ -136,7 +136,7 @@ The following functionality is limited to superusers/admins.
 
 ### Colour Scheme
 
-![Colour Scheme](./assets/readme-images/color-palette-pp5.png)
+![Colour Scheme](static/images/color-palette-pp5.png)
 
 The sites colour scheme has a collection of earthy natural tones that coincide with the purpose of the website - beauty products that are made entirely with natural ingredients. The colours reinforce the website's motivation to stick to the au naturale theme.
 
