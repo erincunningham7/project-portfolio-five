@@ -265,9 +265,37 @@ This page asks the user for confirmation if they wish to delete their review
 
 ### Languages Used
 
+- HTML
+- CSS
+- JavaScript
+- jQuery
+- Bootstrap
+- Python
+- Django
+
 ### Python Modules
 
+- dj-database-url - This library is used to parse the database URL specified in the DATABASE_URL environment variable, which is commonly used for configuring database connections in Django
+projects.
+
+- gunicorn - Gunicorn is a popular WSGI (Web Server Gateway Interface) HTTP server for running Python web applications, including Django applications, in a production environment.
+
+- Pillow - Pillow is a Python Imaging Library (PIL) fork that provides tools for working with images in various formats.
+
+- psycopg2 - Psycopg2 is a PostgreSQL adapter for Python. It allows Django to connect to PostgreSQL databases.
+
+- Black - Black is a Python code formatter that coincides with the PEP8 guidelines.
+
 ### Technologies and programs
+
+- [GitHub](https://github.com/) is the hosting site used to store the code for the website.
+- [Google Fonts](https://fonts.google.com/) was used to import fonts.
+- [Stripe](https://stripe.com/en-ie) was integrated to handle payment processing in a secure and convenient way.
+- [W3C HTML Validator](https://validator.w3.org/) was used to check for errors in the HTML code.
+- [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) was used to check for errors in the CSS code
+- [Js Hint](https://jshint.com/) was used to validate the JavaScript code.
+- [CI Python Linter](https://pep8ci.herokuapp.com/) was used to validate the Python code.
+- [Coolors.co](https://coolors.co/) was used to display the colour scheme.
 
 ## Deployment
 
