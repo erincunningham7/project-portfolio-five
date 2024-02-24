@@ -236,28 +236,63 @@ This is then followed by call-to-action button Shop Now which invites the user t
 ### Products Page
 The products page renders all products to the user.
 
-![Image]()
-
-### Products Card
-The product card consist of an image of the product, title, brand and price.
-
-![Image]()
+![products page](static/images/products-page.png)
 
 ### Single Products Page
 On the page's left side, a product image is displayed. On the right side, the description about the product is displayed. This includes the title, brand, price and reviews.
 If a user is authenticated they can access the add review page, edit review page. If it is an admin they can edit or delete the product itself.
 
-![Image]()
+![single product](static/images/products-card.png)
 
-### Edit review page
-This page allows the user to edit their review in the event they changed their mind. It renders prefilled with the original data. 
+### Review Page
+This page displays the product details and their corresponding reviews.
 
-![edit-review]()
+![reveiws](static/images/reveiws.png)
 
-### Delete review confirmation
-This page asks the user for confirmation if they wish to delete their review
+### Contact Us Page
+The contact us displays a form for users to contact the admin.
 
-![delete-review]()
+![contact](static/images/contact.png)
+
+### Contact Us Confirmation Page
+Once a form has been submitted, the contact us confirmation page is displayed.
+
+![contact confirmation](static/images/contact-confirmation.png)
+
+### Trending Topics
+This page renders a list of blog posts about the beauty industry, specifically relating to organic beauty, nature and overall health.
+
+![topics](static/images/trending-topics.png)
+
+## Topics Detail
+The topics detail page opens up the post and the user can read it in full.
+
+![topics detail](static/images/topics-info.png)
+
+## Sign In Page
+The sign in page allows registered users and admins to sign in with their details.
+
+![sign in](static/images/sign-in.png)
+
+## Sign Out Page
+The sign out page allows logged in users to sign out successfully, with a toast confirmation appearing afterwards.
+
+![sign out](static/images/sign-out.png)
+
+## Sign Up Page
+The sign up page allows new clients to register.
+
+![sign up](static/images/sign-up.png)
+
+## Forgot Password
+This page allows registered users to reset their passwords via email.
+
+![forgot password](static/images/forgot-password.png)
+
+## Password Reset Confirmation
+The page confirms to users that an email has been sent to reset their password.
+
+![password reset confirmed](static/images/password-reset.png)
 
 ## Testing
 
