@@ -209,20 +209,20 @@ The project was created using a basic Kanban Board structure, divided into colum
 ## Features
 
 #### Navbar
-The navbar was built using bootstrap 5 and is responsive. The search bar allows the users to search for products. The My Account drop down gives the user the option to log in or register. If the user is authenticated additional menu options are displayed like my profile and admin (if the user is a superuser). The shopping cart icon is a link to the shopping cart and it also displays the total of the items in the cart.
+The navbar was built using bootstrap 5. The search bar allows the users to search for products. The My Account drop down gives the user the option to log in or register. If the user is authenticated additional menu options are displayed like my profile and admin (if the user is a superuser). The shopping cart icon is a link to the shopping cart and it also displays the total of the items in the cart.
 The nav links allow the user to refine the products by category or to accesss the contact us page and the trending topcis blog.
 
-![Image]
+![Navbar](static/images/navabr.png)
 
 ### Toasts
 Toasts from Bootstrap were implemented to provide customers with feedback in relation to their actions on the website.
 
-![toasts]()
+![toasts](static/images/toasts.png)
 
 #### Footer
 The footer consist of links to social media.
 
-![footer]()
+![footer](static/images/footer.png)
 
 ### Home Page
 #### Hero Section
@@ -231,7 +231,7 @@ The text on the left communicates the entire purpose of the site.
 The hero section image was carefully selected to display the nature element of the website and matches the colour scheme.
 This is then followed by call-to-action button Shop Now which invites the user to browse through the available products.
 
-![hero section]()
+![hero section](static/images/hero.png)
 
 ### Products Page
 The products page renders all products to the user.
