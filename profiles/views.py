@@ -4,42 +4,42 @@ from .models import UserProfile
 from .forms import UserProfileForm
 from checkout.models import Order
 
-# Create your views here 
+
+# Create your views here
 def profile(request):
-    """ Display the user's profile. """
+    """Display the user's profile."""
     profile = get_object_or_404(UserProfile, user=request.user)
 
-    if request.method == 'POST':
+    if request.method == "POST":
         form = UserProfileForm(request.POST, instance=profile)
         if form.is_valid():
             form.save()
-            messages.success(request, 'Profile updated successfully!')
+            messages.success(request, "Profile updated successfully!")
 
     form = UserProfileForm(instance=profile)
     orders = profile.orders.all()
 
-    template = 'profiles/profile.html'
-    context = {
-        'form': form,
-        'orders': orders,
-        'on_profile_page': True
-    }
+    template = "profiles/profile.html"
+    context = {"form": form, "orders": orders, "on_profile_page": True}
 
     return render(request, template, context)
 
 
 def order_history(request, pk):
-    ''' Renders order history '''
-    order = get_object_or_404(Order, pk = pk)
+    """Renders order history"""
+    order = get_object_or_404(Order, pk=pk)
 
-    messages.info(request, (
-        f'This is a past confirmation of your order. '
-        'A confirmation email has been sent.'
-    ))
+    messages.info(
+        request,
+        (
+            f"This is a past confirmation of your order. "
+            "A confirmation email has been sent."
+        ),
+    )
 
-    template = 'checkout/checkout_success.html'
+    template = "checkout/checkout_success.html"
     context = {
-        'order': order,
-        'from_profile': True,
+        "order": order,
+        "from_profile": True,
     }
     return render(request, template, context)

@@ -6,13 +6,22 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('reviews', '0001_initial'),
+        ("reviews", "0001_initial"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='userreview',
-            name='rating',
-            field=models.IntegerField(choices=[(1, '★☆☆☆☆'), (2, '★★☆☆☆'), (3, '★★★☆☆'), (4, '★★★★☆'), (5, '★★★★★')], default=None),
+            model_name="userreview",
+            name="rating",
+            field=models.IntegerField(
+                choices=[
+                    (1, "★☆☆☆☆"),
+                    (2, "★★☆☆☆"),
+                    (3, "★★★☆☆"),
+                    (4, "★★★★☆"),
+                    (5, "★★★★★"),
+                ],
+                default=None,
+            ),
         ),
     ]

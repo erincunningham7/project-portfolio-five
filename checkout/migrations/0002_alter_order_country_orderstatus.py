@@ -7,21 +7,47 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('checkout', '0001_initial'),
+        ("checkout", "0001_initial"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='order',
-            name='country',
+            model_name="order",
+            name="country",
             field=models.CharField(max_length=40),
         ),
         migrations.CreateModel(
-            name='OrderStatus',
+            name="OrderStatus",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('status', models.CharField(blank=True, choices=[('in_progress', 'In Progress'), ('finished', 'Finished'), ('cancelled', 'Cancelled')], default='in_progress', max_length=200, null=True)),
-                ('order', models.OneToOneField(on_delete=django.db.models.deletion.CASCADE, to='checkout.order')),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                (
+                    "status",
+                    models.CharField(
+                        blank=True,
+                        choices=[
+                            ("in_progress", "In Progress"),
+                            ("finished", "Finished"),
+                            ("cancelled", "Cancelled"),
+                        ],
+                        default="in_progress",
+                        max_length=200,
+                        null=True,
+                    ),
+                ),
+                (
+                    "order",
+                    models.OneToOneField(
+                        on_delete=django.db.models.deletion.CASCADE, to="checkout.order"
+                    ),
+                ),
             ],
         ),
     ]
