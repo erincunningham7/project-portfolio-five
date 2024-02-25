@@ -17,10 +17,10 @@ Clean Cosmetics is an ecommerce application specifically design to facilitate co
     -   [Wireframes](#Wireframes)
     -   [Agile Methodology](#Agile-Methodology)
          -   [Overview](#overview)
-         -   [EPICS(Milestones)](#epicsmilestones)
          -   [User Stories issues](#user-stories-issues)
          -   [MoSCoW prioritization](#moscow-prioritization)
          -   [GitHub Project](#github-project)
+         -   [Other](#other)
 -   [Features](#features)
 -   [Future Features](#future-features)
 -   [Marketing](#marketing)
@@ -179,6 +179,11 @@ This model is connected to the Order and Book as a ForeignKey. It is created for
 
 ### Wireframes
 
+I drew a rough draft of how I wanted my site to look when completed. Given the time contstraints, it didn't turn out exactly the same as the original idea.
+
+![Wireframe One](static/images/wireframe.jpg)
+![Wireframe Two](static/images/wireframe2.jpg)
+
 ### Agile Methodology
 
 #### Overview
@@ -204,6 +209,18 @@ This prioritization technique was used to prioritize the features and requiremen
 The project was created using a basic Kanban Board structure, divided into columns Todo, In Progress and Done.. This setup provides a clear and organized way to track the status of tasks and visualize and manage the workflow.
 
 ![Project](static/images/project.png)
+
+### Other
+
+I created a use case diagram before I started my project, with the overall purpose of the diagram was to portray the behavior and structure of the system.
+
+![UML](static/images/use-case-diagram.jpg)
+
+I also quickly drew up some use case scenarios to represent the steps required, a set of different possible interactions, with sometimes different actors involved to scope which different flows of events are possible. Even if the interactions and actors are different they should all intend to have the same outcome.
+
+![Use case one](static/images/use-case.jpg)
+![Use case two](static/images/use-case2.jpg)
+![Use case three](static/images/use-case3.jpg)
 
 ## Features
 
@@ -313,7 +330,47 @@ When an admin is logged in to the site and they click on a product card, they ca
 
 ![edit and delete](static/images/admin-edit-delete.png)
 
+## Future Features
+- Discount codes
+- Stock quantity
+- Wishlist
+
+## Search Engine Optimization SEO and Marketing
+
+### Business Model
+The B2C (Business-to-Consumer) ecommerce model for this online beauty store operates as a platform catering to individual consumers looking to purchase a wide array of cosmetic products conveniently from their homes. This model includes cosmetics and personal care products qualified as organic, natural, non-toxic, safe, pure, eco-friendly, sustainable, cruelty-free, vegan, plastic-free, and biodegradable.
+
+The target customers for this online beauty store expand over a wide demographic, including but not limited to, professionals, newbies, and individuals passionate about the environment. Studies show that younger customers are more likely to be interested in sustainable products. With the clean beauty market industry on the rise, and the hashtag #cleanbeauty trending on tiktok with millions of views, gen z are the priority target consumer above all else.
+
+### SEO
+- Keywords were added to the main template in the description.
+- A sitemap was generated using [xml-sitemaps](https://www.xml-sitemaps.com/) This was generated using the deployed website. The file is included in the root level of the project.
+- Robots.txt file was created at the root level of the project. This file tells the search engine crawlers which URLs they can access on the website.
+
+
+### Marketing
+- Newsletter is included in the home page. This section facilitates user engagement and promotes the e-commerce store through effective email marketing and social media presence.
+
+- Facebook Page
+
+[Facebook](https://www.facebook.com/profile.php?id=61556517192102)
+![Facebook Page](static/images/facebook.jpg)
+![Facebook Page](static/images/facebook2.jpg)
+![Facebook Page](static/images/facebook3.jpg)
+
 ## Testing
+
+### Bugs
+
+- Known Bugs
+
+If I had more time the following bugs would have been successfully closed.
+
+1. The edit review page does not successfully display the submitted form that needs to be edited.
+2. The admins order status form was not completed.
+3. The X button does not successfully close the toasts.
+4. The country field in the address form is disproportionate.
+5. The navbar is disproportiante on medium and small screens, with some of it disappearing completely.
 
 - Home Page
 
@@ -381,7 +438,6 @@ When an admin is logged in to the site and they click on a product card, they ca
 - Stripe 
 
 All stripe events and webhooks have been tested and are working sufficiently.
-
 
 ## Technologies And Languages
 
