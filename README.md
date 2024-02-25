@@ -343,7 +343,7 @@ The B2C (Business-to-Consumer) ecommerce model for this online beauty store oper
 The target customers for this online beauty store expand over a wide demographic, including but not limited to, professionals, newbies, and individuals passionate about the environment. Studies show that younger customers are more likely to be interested in sustainable products. With the clean beauty market industry on the rise, and the hashtag #cleanbeauty trending on tiktok with millions of views, gen z are the priority target consumer above all else.
 
 ### SEO
-- Keywords were added to the main template in the description.
+- Keywords were added to the main template in the description and in meta tags.
 - A sitemap was generated using [xml-sitemaps](https://www.xml-sitemaps.com/) This was generated using the deployed website. The file is included in the root level of the project.
 - Robots.txt file was created at the root level of the project. This file tells the search engine crawlers which URLs they can access on the website.
 
