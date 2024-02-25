@@ -12,7 +12,7 @@
    </div>
    <div class="row d-flex justify-content-around g-0">
       <div class="col-12 col-md-8 col-lg-6 p-3 my-1 form-border">
-         <form method="POST" ction="{% url 'add_product' %}" enctype="multipart/form-data">
+         <form method="POST" action="{% url 'add_product' %}" enctype="multipart/form-data">
             {% csrf_token %}
             {{ form | crispy }}
             <div class="form-floating mb-2">
@@ -22,6 +22,5 @@
          </form>
       </div>
    </div>
-</div>
 </div>
 {% endblock %}

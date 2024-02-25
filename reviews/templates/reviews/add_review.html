@@ -1,30 +1,30 @@
 {% extends "base.html" %}
 {% load static %}
-
 {% block content %}
 <div class="container" id="reviews">
-    <div class="row g-0">
-       <div class="col text-center">
-          <hr>
-          <h2>Add Your Review</h2>
-          <hr>
-       </div>
-    </div>
-<div class="user-rating">
-        <h6 class="ms-2">{{ review.user }}</h6>
-        <div class="rating ms-2">
-            {% for i in review.get_rating_range %}
-            <i class="fa-solid fa-star" style="color:#f0bc00"></i>
-            {% endfor %}
-        </div>
-<div class="row g-0">
-    <div class="col-12 col-md-8">
-        <form class="action="{% url 'add_review' product.id %}" method="POST">
-            {% csrf_token %}
-            {{ form|crispy }}
-            <button type="submit" class="btn btn-green">Submit</button>
-        </form>
-    </div>
-</div>
+   <div class="row g-0">
+      <div class="col text-center">
+         <hr>
+         <h2>Add Your Review</h2>
+         <hr>
+      </div>
+   </div>
+   <div class="user-rating">
+      <h6 class="ms-2">{{ review.user }}</h6>
+      <div class="rating ms-2">
+         {% for i in review.get_rating_range %}
+         <i class="fa-solid fa-star" style="color:#f0bc00"></i>
+         {% endfor %}
+      </div>
+      <div class="row g-0">
+         <div class="col-12 col-md-8">
+            <form action="{% url 'add_review' product.id %}" method="POST">
+               {% csrf_token %}
+               {{ form|crispy }}
+               <button type="submit" class="btn btn-green">Submit</button>
+            </form>
+         </div>
+      </div>
+   </div>
 </div>
 {% endblock %}

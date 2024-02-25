@@ -1,32 +1,31 @@
 {% extends "base.html" %}
 {% load static %}
-
 {% block content %}
 <div class="container" id="blog">
-    <div class="row g-0">
-       <div class="col text-center">
-          <hr>
-          <h2>Trending Topics</h2>
-          <p>Check Out The Latest Trending Topics In The Clean Beauty Industry</p>
-          <hr>
-       </div>
-    </div>
+   <div class="row g-0">
+      <div class="col text-center">
+         <hr>
+         <h2>Trending Topics</h2>
+         <p>Check Out The Latest Trending Topics In The Clean Beauty Industry</p>
+         <hr>
+      </div>
+   </div>
 </div>
 <div class="container">
    <div class="row g-0">
       <!-- Topic Column -->
-         <div class="col-md-8 mt-3 left">
-            {% for topic in topic_list %}
-            <div class="card mb-4">
-               <div class="card-body">
-                     <h2 class="card-title">{{ topic.title }}</h2>
-                     <p class="card-text text-muted h6">{{ topic.created_on}} </p>
-                     <p class="card-text">{{topic.content|slice:":200" }}</p>
-                     <a href="{% url 'topic_detail' topic.slug  %}" class="btn btn-primary">Read More &rarr;</a>
-               </div>
+      <div class="col-md-8 mt-3 left">
+         {% for topic in topic_list %}
+         <div class="card mb-4">
+            <div class="card-body">
+               <h2 class="card-title">{{ topic.title }}</h2>
+               <p class="card-text text-muted h6">{{ topic.created_on}} </p>
+               <p class="card-text">{{topic.content|slice:":200" }}</p>
+               <a href="{% url 'topic_detail' topic.slug  %}" class="btn btn-primary">Read More &rarr;</a>
             </div>
-            {% endfor %}
          </div>
+         {% endfor %}
       </div>
+   </div>
 </div>
 {% endblock %}

@@ -1,24 +1,22 @@
 {% extends 'base.html' %}
-
 {% load static %}
-
 {% block content %}
 {% for product in products %}
 <section class="container d-flex justify-content-center mt-3">
-    <div class="row align-center column-gap-3 g-0">
-        <!--Card Start-->
-        <div class="card col-sm-1 col-4" style="width: 18rem">
-            <img src="{{ product.image.url }}" class="card-img-top" alt="{{ product.title }}">
-            <div class="card-body">
-                <h5 class="card-title">{{ product.title }}</h5>
-                <p>{{ product.brand }}</p>
-                <p>€{{ product.price }}</p>
-                <p class="card-text">{{ product.description }}</p>
-                <a href="{% url 'product_info' product.id %}" class="btn btn-primary">Product Details</a>
-            </div>    
-        </div>
-        <!--End Card-->
-    </div>
+   <div class="row align-center column-gap-3 g-0">
+      <!--Card Start-->
+      <div class="card col-sm-1 col-4" style="width: 18rem">
+         <img src="{{ product.image.url }}" class="card-img-top" alt="{{ product.title }}">
+         <div class="card-body">
+            <h5 class="card-title">{{ product.title }}</h5>
+            <p>{{ product.brand }}</p>
+            <p>€{{ product.price }}</p>
+            <p class="card-text">{{ product.description }}</p>
+            <a href="{% url 'product_info' product.id %}" class="btn btn-primary">Product Details</a>
+         </div>
+      </div>
+      <!--End Card-->
+   </div>
 </section>
 {% endfor %}
 {% endblock %}

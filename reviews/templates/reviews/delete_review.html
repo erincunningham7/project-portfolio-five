@@ -1,18 +1,17 @@
 {% extends "base.html" %}
 {% load static %}
-
 {% block content %}
 <div class="container delete-review">
-    <div class="row g-0">
-        <div class="col-10 col-md-7 col-lg-6">
-            <h4>Delete Review</h4>
-            <form action="{% url 'delete_review' review.id %}" method="POST">
-                {% csrf_token %}
-                <p class="fw-4">You are about to delete this review. This action cannot be undone.</p>
-                <a href="{{product}}" class="btn btn-green">Back</a>
-                <button class="btn btn-danger" type="submit">Delete</button>
-            </form>
-        </div>
-    </div>
+   <div class="row g-0">
+      <div class="col-10 col-md-7 col-lg-6">
+         <h4>Delete Review</h4>
+         <form action="{% url 'delete_review' review.id %}" method="POST">
+            {% csrf_token %}
+            <p class="fw-4">You are about to delete this review. This action cannot be undone.</p>
+            <a href="{{product}}" class="btn btn-green">Back</a>
+            <button class="btn btn-danger" type="submit">Delete</button>
+         </form>
+      </div>
+   </div>
 </div>
 {% endblock %}
