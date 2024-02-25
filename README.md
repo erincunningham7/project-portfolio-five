@@ -315,6 +315,74 @@ When an admin is logged in to the site and they click on a product card, they ca
 
 ## Testing
 
+- Home Page
+
+|Section|Test Action|Expected Result|Pass/Fail|Comments|
+| ---| ---| ---| ---| ---|
+|Navbar|Click on Title in Navabr|Redirect to Home |Pass| |
+||Click on the links in Navbar|Redirect to correct page |Pass|Navbar present on all pages | |
+||Click on the links in My Account|All redirect to correct page |Pass|
+||Click on the cart icon| Redirect to shopping cart |Pass|
+|Searchbar|type keywords|returns correct results |Pass|searchabar present on all pages |
+|Hero section|Open Home page. Ensure the hero section loads as it should|Hero section loads as it should |Pass| |
+|Hero section|Click on the dive in button, ensure it leads to products page|It leads to products page |Pass| |
+|Product page| Click on the product card button. Ensure it redirects to the correct single product page |When clicked each card redirects to the correct single product page |Pass| |
+|| Click on the product card button add to cart. Ensure the item is added to cart |When clicked each card button adds the corresponding product to cart |Pass| |
+|Newsletter| Enter valid email. Ensure the thank you fo subscribing text appears |Pass| |
+|Footer|Click on all of the social links in the footer. Ensure each external link opens the correct page in a new tab |All external links open the correct page in a new tab |Pass| |
+
+- Single Product Page 
+
+|Section|Test Action|Expected Result|Pass/Fail|Comments|
+| ---| ---| ---| ---| ---|
+|Product details|Open the product page. Ensure all the relevant information is correct for the specific product|All the relevant information is correct for the specific product|Pass||
+||Click add to cart button and ensure the product is added to cart|When clicked the product is added to cart |Pass||
+|reviews|Select reviews tag and ensure reviews is displayed| reviews is displayed |Pass||
+
+- Shopping Cart 
+
+|Section|Test Action|Expected Result|Pass/Fail|Comments|
+| ---| ---| ---| ---| ---|
+|Shopping cart|Add product to cart and ensure it appears correctly in the cart|The product appears correctly in the cart|Pass||
+|Product|Click on product link and ensure it leads to the product page.|The link leads to the product page|Pass||
+|Update quantity|From the drop down select new quantity and update. Ensure the total is calculated correctly|The product updates correctly in the cart|Pass||
+|remove product|Click on the remove button and ensure the product is removed from cart|The product is removed from the cart|Pass||
+|remove discount|After discount has been applied click on the remove button and ensure the total is calculated and a message appears|The total is calculated and a message appears|Pass||
+
+- Checkout
+
+|Section|Test Action|Expected Result|Pass/Fail|Comments|
+| ---| ---| ---| ---| ---|
+|Checkout|Fill in the form and click on save details. Use stripe test card and confirm the order is successfull by checking stripe. Confirm the address is saved to profile|The address is saved to my profile. The purchase is successfull. Stripe logs show success.|Pass||
+|Checkout|Visit the page as unauthenticated user. Ensure the form is not prefilled and does not allow to save details|The form is not prefilled and does not allow to save details.|Pass||
+|Checkout|Click on back button and ensure it takes the user to the products page|The back button work as it should.|Pass||
+
+- My Profile
+
+|Section|Test Action|Expected Result|Pass/Fail|Comments|
+| ---| ---| ---| ---| ---|
+|Profile|Fill in the form and click on update. Ensure the details are updated|The details are updated|Fail|The full name field does not update|
+
+- My Orders
+
+|Section|Test Action|Expected Result|Pass/Fail|Comments|
+| ---| ---| ---| ---| ---|
+|Orders|Open the orders page and ensure the orders showing are correct. |The orders are correct|Pass||
+|Orders |Click on the order link and ensure it leads to the order page|The link leads to the order page|Pass||
+
+- Admin
+
+|Section|Test Action|Expected Result|Pass/Fail|Comments|
+| ---| ---| ---| ---| ---|
+|Admin|Click Admin button under My Account. Ensure the admin is redirected to the add products page |The button works as expected|Pass||
+|Admin dashboard|Click on the edit link in a product detail page, ensure it redirects to the edit product page |it redirects to the edit product page|Pass||
+|Admin dashboard|Click on the delete product link in a product detail page, ensure it redirects to the delete product page |it redirects to the delete product page|Pass||
+
+- Stripe 
+
+All stripe events and webhooks have been tested and are working sufficiently.
+
+
 ## Technologies And Languages
 
 ### Languages Used
