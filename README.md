@@ -37,7 +37,6 @@ Clean Cosmetics is an ecommerce application specifically design to facilitate co
     -   [Creating A Fork](#creating-a-fork)
     -   [Cloning Repository](#cloning-repository)
 -   [Credits](#credits)
-    -   [Media](#media)
     -   [Code](#code)
 
 ## User Experience
@@ -192,19 +191,19 @@ This is how I planned out my user stories with the agile methodology in mind I c
 
 The structure of the user story issue consists of the user story, acceptance criteria, and tasks that outline the steps that are required for this issue to be completed.
 
-![User Story]()
+![User Story](static/images/issues.png)
 
 #### MoSCoW prioritization
 
 This prioritization technique was used to prioritize the features and requirements of the project based on their importance. The acronym "MoSCoW" stands for "Must have, Should have, Could have, and Won't have." Each category helps to prioritize features to guide the development process and ensure that the most essential elements are targeted first.
 
-![MoSCoW]()
+![MoSCoW](static/images/moscow.png)
 
 #### Github Project
 
 The project was created using a basic Kanban Board structure, divided into columns Todo, In Progress and Done.. This setup provides a clear and organized way to track the status of tasks and visualize and manage the workflow.
 
-![Project]()
+![Project](static/images/project.png)
 
 ## Features
 
@@ -341,6 +340,8 @@ projects.
 
 - Black - Black is a Python code formatter that coincides with the PEP8 guidelines.
 
+- whitenoise - Whitenoise is a middleware for serving static files directly from your Django application.
+
 ### Technologies and programs
 
 - [GitHub](https://github.com/) is the hosting site used to store the code for the website.
@@ -351,10 +352,17 @@ projects.
 - [Js Hint](https://jshint.com/) was used to validate the JavaScript code.
 - [CI Python Linter](https://pep8ci.herokuapp.com/) was used to validate the Python code.
 - [Coolors.co](https://coolors.co/) was used to display the colour scheme.
+- [Pexels](https://www.pexels.com/) was used for free images.
 
 ## Deployment
 
 ### Before Deployment
+
+To ensure the application is deployed correctly on Heroku it is imperative to update the requirements.txt. This is a list of requirements that the application needs in order to run correctly and without error.
+
+- To create the list of requirements use the command pip3 freeze > requirements.txt. This will ensure the file with the requirements is updated. Then make sure to commit and push the changes to GitHub.
+
+! Before pushing code to GitHub ensure all credentials are in an env.py file, which is included in the .gitignore file. This tells Git not to track this file which will prevent it from being added to Github and the credentials being exposed.
 
 ### Stripe setup
 
@@ -367,6 +375,25 @@ projects.
 - When the application is deployed, run a test transaction to ensure the webhooks are working. The events chan be checked in the webhooks page.
 
 ### Deployment on Heroku
+
+- To deploy the project on Heroku, the first step is to create an account.
+- Once logged in, create a new app by clicking on the create app button.
+- Pick a unique name for the app, relevant to your website, select a region, and click Create App.
+- On the next page select the settings tab and scroll down to Config Vars. If there are any files that should be hidden like credentials and API keys it is essential that they are added here. In this project, there are several credentials that need to be protected. This project requires credentials for:
+
+        1. Cloudinary url
+        2. Database credentials
+        3. Email host password
+        4. Email host user
+        5. Django's secret key
+        6. Stripe public key
+        7. stripe secret key
+        8. Stripe wh secret
+
+- Scroll down to Buildpacks. The buildpacks will install further dependencies that are not included in the requirements.txt. For this project, the buildpack required is Python
+- From the tab above select the deploy section.
+- The deployment method for this project is GitHub. Once selected, confirm that we want to connect to GitHub, search for the repository name, and click connect to connect the Heroku app to our GitHub code.
+- Scroll further down to the deploy section where automatic deploys can be enabled, which means that the app will update every time code is pushed to GitHub. Click deploy and wait for the app to be built. Once this is done, a message should appear letting us know that the app was successfully deployed with a view button to see the app.
 
 ### Creating a fork
 
@@ -386,8 +413,6 @@ projects.
 5. Press 'Enter' to create your local clone
 
 ## Credits
-
-### Media
 
 ### Code
 
