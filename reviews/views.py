@@ -42,7 +42,8 @@ def add_review(request, product_id):
             messages.success(request, "Added review successfully!")
         else:
             messages.error(
-                request, "There was an error submitting your form. Please try again."
+                request,
+                "There was an error submitting your form. Please try again."
             )
         return redirect(reverse("product_info", args=[product_id]))
     else:
@@ -70,7 +71,8 @@ def update_review(request, product_id):
                 messages.success(request, "Updated review successfully!")
                 return redirect("product", product.id)
             messages.error(
-                request, "There was an error updating your review. Please try again."
+                request,
+                "There was an error updating your review. Please try again."
             )
         else:
             messages.error(

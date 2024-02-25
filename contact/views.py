@@ -28,7 +28,9 @@ class ContactView(FormView):
 
     def contact(self, form):
         """
-        Clean each field, layout the format of the message, use send_email to send the subject, message, from email, and recipient list
+        Clean each field, layout the format of the message,
+        use send_email to send the subject, message,
+        from email, and recipient list
         """
         full_name = form.cleaned_data.get("full_name")
         email = form.cleaned_data.get("email")

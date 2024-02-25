@@ -55,7 +55,8 @@ class Order(models.Model):
     def update_total(self):
         """Update the total every time an item is added"""
         self.order_total = (
-            self.lineitems.aggregate(Sum("lineitem_total"))["lineitem_total__sum"] or 0
+            self.lineitems.aggregate(Sum("lineitem_total"))
+            ["lineitem_total__sum"] or 0
         )
         self.delivery_cost = 0
 
@@ -106,7 +107,8 @@ class OrderLineItem(models.Model):
 class OrderStatus(models.Model):
     order = models.OneToOneField(Order, on_delete=models.CASCADE)
     status = models.CharField(
-        max_length=200, null=True, blank=True, choices=STATUS, default=STATUS[0][0]
+        max_length=200, null=True, blank=True, choices=STATUS,
+        default=STATUS[0][0]
     )
 
     def __str__(self):

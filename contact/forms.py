@@ -1,6 +1,7 @@
 from django import forms
 from .models import Contact
 
+
 class ContactUs(forms.ModelForm):
     class Meta:
         model = Contact
@@ -12,7 +13,9 @@ class ContactUs(forms.ModelForm):
     email = forms.EmailField(
         widget=forms.TextInput(attrs={"placeholder": "Enter email"})
     )
-    subject = forms.CharField(widget=forms.TextInput(attrs={"placeholder": "Subject"}))
+    subject = forms.CharField(
+        widget=forms.TextInput(attrs={"placeholder": "Subject"})
+       )
     message = forms.CharField(
         widget=forms.Textarea(attrs={"placeholder": "Your message"})
     )

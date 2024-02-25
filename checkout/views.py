@@ -1,4 +1,5 @@
-from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpResponse
+from django.shortcuts import render, redirect, reverse,
+from django.shortcuts import get_object_or_404, HttpResponse
 from django.views.decorators.http import require_POST
 from django.contrib import messages
 from .forms import OrderForm
@@ -88,7 +89,8 @@ def checkout(request):
                     order.delete()
                     return redirect(reverse("shopping_bag"))
             request.session["save_info"] = "save-info" in request.POST
-            return redirect(reverse("checkout_success", args=[order.order_number]))
+            return redirect(reverse("checkout_success",
+                                    args=[order.order_number]))
         else:
             messages.error(
                 request, "There was an error with this form. Please try again"
@@ -132,7 +134,7 @@ def checkout(request):
     if not stripe_public_key:
         messages.warning(
             request,
-            "Stripe public key is missing. Did you forget to set it in your environment?",
+            "Stripe public key is missing.",
         )
 
     template = "checkout/checkout.html"
