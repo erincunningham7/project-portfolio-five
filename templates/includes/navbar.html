@@ -30,7 +30,7 @@
                   <p class="my-0">My Account</p>
                </div>
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="my-account">
+            <div class="dropdown-menu border-0" aria-label="my-account">
                {% if request.user.is_authenticated %}
                {% if request.user.is_superuser %}
                <a href="{% url 'add_product' %}" class="dropdown-item">Admin</a>
@@ -75,7 +75,7 @@
       <li class="nav nav-item dropdown">
          <a class="logo-font font-weight-bold nav-link text-black" href="#" aria-haspopup="true" aria-expanded="false"
             data-bs-toggle="dropdown">Makeup</a>
-         <div class="dropdown-menu border-0" aria-labelledby="makeup">
+         <div class="dropdown-menu border-0" aria-label="makeup">
             <a href="{% url 'products' %}?category=face,eyes,lips,palettes" class="dropdown-item fw-bold">Shop All</a>
             <a href="{% url 'products' %}?category=face" class="dropdown-item">Face</a>
             <a href="{% url 'products' %}?category=eyes" class="dropdown-item">Eyes</a>
@@ -86,7 +86,7 @@
       <li class="nav-item dropdown">
          <a class="logo-font font-weight-bold nav-link text-black" href="#" aria-haspopup="true" aria-expanded="false"
             data-bs-toggle="dropdown">Skincare</a>
-         <div class="dropdown-menu border-0" aria-labelledby="skincare">
+         <div class="dropdown-menu border-0" aria-label="skincare">
             <a href="{% url 'products' %}?category=cleansers_exfoliators,moisturisers,toners_mist,masks,skincare_tools" class="dropdown-item fw-bold">Shop All</a>
             <a href="{% url 'products' %}?category=cleansers_exfoliators" class="dropdown-item">Cleansers &amp; Exfoliators</a>
             <a href="{% url 'products' %}?category=moisturisers" class="dropdown-item">Moisturisers</a>
@@ -98,7 +98,7 @@
       <li class="nav-item dropdown">
          <a class="logo-font font-weight-bold nav-link text-black" href="#" id="bath-and-body-link" aria-haspopup="true"
             aria-expanded="false" data-bs-toggle="dropdown">Bath &amp; Body</a>
-         <div class="dropdown-menu border-0" aria-labelledby="bath-and-body">
+         <div class="dropdown-menu border-0" aria-label="bath-and-body">
             <a href="{% url 'products' %}?category=bath_shower,body_moisturisers" class="dropdown-item fw-bold">Shop All</a>
             <a href="{% url 'products' %}?category=bath_shower" class="dropdown-item">Bath &amp; Shower</a>
             <a href="{% url 'products' %}?category=body_moisturisers" class="dropdown-item">Body Moisturisers</a>
