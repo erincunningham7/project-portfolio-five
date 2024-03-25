@@ -32,7 +32,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 DEBUG = "DEVELOPMENT" in os.environ
 
 ALLOWED_HOSTS = [
-    "8000-erincunning-projectport-b8w42e8yo8h.ws-eu108.gitpod.io",
+    "8000-erincunning-projectport-lj225g5bwxe.ws-eu110.gitpod.io",
     "clean-cosmetics-ecommerce-app-ddc58ad89794.herokuapp.com",
 ]
 
