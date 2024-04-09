@@ -1,0 +1,61 @@
+{% load static %}
+
+<div class="collapse navbar-collapse" id="main-nav">
+    <ul class="navbar-nav w-auto mx-auto">
+       <li class="nav-item">
+          <a class="logo-font font-weight-bold nav-link text-black mr-5" href="{% url 'home' %}">
+          Home
+          </a>
+       </li>
+       <li class="nav-item d-block d-md-none">
+          <a class="logo-font font-weight-bold nav-link text-black mr-5" href="{% url 'products' %}">
+          All Products
+          </a>
+       </li>
+       <li class="nav nav-item dropdown">
+          <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" aria-haspopup="true" aria-expanded="false"
+             data-bs-toggle="dropdown">Makeup</a>
+          <div class="dropdown-menu border-0" aria-label="makeup">
+             <a href="{% url 'products' %}?category=face,eyes,lips,palettes" class="dropdown-item fw-bold">Shop All</a>
+             <a href="{% url 'products' %}?category=face" class="dropdown-item">Face</a>
+             <a href="{% url 'products' %}?category=eyes" class="dropdown-item">Eyes</a>
+             <a href="{% url 'products' %}?category=lips" class="dropdown-item">Lips</a>
+             <a href="{% url 'products' %}?category=palettes" class="dropdown-item">Palettes</a>
+          </div>
+       </li>
+       <li class="nav-item dropdown">
+          <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" aria-haspopup="true" aria-expanded="false"
+             data-bs-toggle="dropdown">Skincare</a>
+          <div class="dropdown-menu border-0" aria-label="skincare">
+             <a href="{% url 'products' %}?category=cleansers_exfoliators,moisturisers,toners_mist,masks,skincare_tools" class="dropdown-item fw-bold">Shop All</a>
+             <a href="{% url 'products' %}?category=cleansers_exfoliators" class="dropdown-item">Cleansers &amp; Exfoliators</a>
+             <a href="{% url 'products' %}?category=moisturisers" class="dropdown-item">Moisturisers</a>
+             <a href="{% url 'products' %}?category=toners_mists" class="dropdown-item">Toners &amp; Mists</a>
+             <a href="{% url 'products' %}?category=masks" class="dropdown-item">Masks</a>
+             <a href="{% url 'products' %}?category=skincare_tools" class="dropdown-item">Skincare Tools</a>
+          </div>
+       </li>
+       <li class="nav-item dropdown">
+          <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="bath-and-body-link" aria-haspopup="true"
+             aria-expanded="false" data-bs-toggle="dropdown">Bath &amp; Body</a>
+          <div class="dropdown-menu border-0" aria-label="bath-and-body">
+             <a href="{% url 'products' %}?category=bath_shower,body_moisturisers" class="dropdown-item fw-bold">Shop All</a>
+             <a href="{% url 'products' %}?category=bath_shower" class="dropdown-item">Bath &amp; Shower</a>
+             <a href="{% url 'products' %}?category=body_moisturisers" class="dropdown-item">Body Moisturisers</a>
+          </div>
+       </li>
+       <li class="nav-item">
+          <a class="logo-font font-weight-bold nav-link text-black mr-5" href="{% url 'contact' %}">
+          Contact Us
+          </a>
+       </li>
+       <li class="nav-item">
+          <a class="logo-font font-weight-bold nav-link text-black mr-5" href="{% url 'topics' %}">
+          Trending Topics
+          </a>
+       </li>
+    </ul>
+ </div>
+ </div>
+ </nav>
+ </div>
