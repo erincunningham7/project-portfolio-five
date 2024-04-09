@@ -29,10 +29,12 @@ TEMPLATES_DIR = TEMPLATES_DIR = os.path.join(BASE_DIR, "templates")
 SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = "DEVELOPMENT" in os.environ
+# DEBUG = "DEVELOPMENT" in os.environ
+
+DEBUG = True
 
 ALLOWED_HOSTS = [
-    "8000-erincunning-projectport-lj225g5bwxe.ws-eu110.gitpod.io",
+    "8000-erincunning-projectport-zpnad977aha.ws-eu110.gitpod.io",
     "clean-cosmetics-ecommerce-app-ddc58ad89794.herokuapp.com",
 ]
 
