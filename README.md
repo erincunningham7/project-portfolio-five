@@ -32,6 +32,7 @@ Clean Cosmetics is an ecommerce application specifically design to facilitate co
     -   [Python Modules](#python-modules)
     -   [Technologies and programs](#technologies-and-programs)
 -   [Deployment](#deployment)
+    - [Version Control](#version-control)
     -   [Before Deployment](#before-deployment)
     -   [Deployment on Heroku](#deployment-on-heroku)
     -   [Creating A Fork](#creating-a-fork)
@@ -480,6 +481,18 @@ projects.
 
 ## Deployment
 
+### Version Control
+
+The Clean Cosmetics website was created using Gitpod and pushed to github to the remote repository ‘project-portfolio-five’.
+
+The following git commands were used religiously throughout the website's development to push code to the remote repo:
+
+git add . - This command was used to add the changed file(s) to the staging area before they were committed to the local repository.
+
+git commit -m “commit message” - This command was used to commit the changes to the remote repo queue ready for the last step in the process.
+
+git push - This command was used to push all of the committed code to the repository on github.
+
 ### Before Deployment
 
 To ensure the application is deployed correctly on Heroku it is imperative to update the requirements.txt. This is a list of requirements that the application needs in order to run correctly and without error.
@@ -500,11 +513,13 @@ To ensure the application is deployed correctly on Heroku it is imperative to up
 
 ### Deployment on Heroku
 
-- To deploy the project on Heroku, the first step is to create an account.
-- Once logged in, create a new app by clicking on the create app button.
-- Pick a unique name for the app, relevant to your website, select a region, and click Create App.
-- On the next page select the settings tab and scroll down to Config Vars. If there are any files that should be hidden like credentials and API keys it is essential that they are added here. In this project, there are several credentials that need to be protected. This project requires credentials for:
-
+- Go to Heroku website and create a registered account
+- Click the 'new' button in the top right corner
+- Select 'create new app'
+- Enter the application name
+- Select region and click the create app button
+- Navigate to the settings tab and click on 'reveal config vars'
+- Add the following config vars:
         1. Cloudinary url
         2. Database credentials
         3. Email host password
@@ -515,11 +530,18 @@ To ensure the application is deployed correctly on Heroku it is imperative to up
         8. Stripe wh secret
 
 - Scroll down to Buildpacks. The buildpacks will install further dependencies that are not included in the requirements.txt. For this project, the buildpack required is Python
-- From the tab above select the deploy section.
-- The deployment method for this project is GitHub. Once selected, confirm that we want to connect to GitHub, search for the repository name, and click connect to connect the Heroku app to our GitHub code.
-- Scroll further down to the deploy section where automatic deploys can be enabled, which means that the app will update every time code is pushed to GitHub. Click deploy and wait for the app to be built. Once this is done, a message should appear letting us know that the app was successfully deployed with a view button to see the app.
+- Navigate to the deploy tab
+- Click the deploy tab
+- Scroll down to 'connect to GitHub' and sign in to your Github account
+- Using the search box, find the Github repository you want to deploy and click the 'connect' button
+- Scroll down to the manual deploy section and choose the main branch
+- Click deploy
+
+The app should now be deployed.
 
 ### Creating a fork
+
+Forks are usually used to either propose changes to someone else's project or to use someone else's project as a base for your own website idea.
 
 1. Navigate to the [repository](https://github.com/erincunningham7/project-portfolio-five)
 2. In the top-right corner of the page, click the 'Fork' button and select create a fork
@@ -527,6 +549,18 @@ To ensure the application is deployed correctly on Heroku it is imperative to up
 4. Copy the main branch only, or all branches to the new fork
 5. Click 'Create a Fork'
 6. A repository will then appear in your GitHub
+
+### Run Locally
+
+Open Github and go to the GitHub repository you would like to clone to use locally:
+
+1. Click on the 'code' button
+2. Click on HTTPS
+3. Copy the repository link
+4. Open your IDE (git must be installed for the following steps)
+5. Type git clone copied-git-url into the IDE terminal
+
+The project will now have been cloned on your local machine for use.
 
 ### Cloning Repository
 
