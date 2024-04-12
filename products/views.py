@@ -61,15 +61,18 @@ def add_product(request):
         messages.error(request, "You need admin rights to access this page")
         return redirect("home")
 
-    form = ProductForm()
+    # form = ProductForm(request.POST, request.FILES)
     if request.method == "POST":
         form = ProductForm(request.POST, request.FILES)
         if form.is_valid():
-            product = form.save()
+            form.save()
             messages.success(request, "Product added successfully.")
             return redirect(reverse("add_product"))
         else:
             messages.error(request, "Invalid form. Try again")
+    else:
+        form = ProductForm()
+
     template = "products/add_product.html"
     context = {
         "form": form,
@@ -79,13 +82,13 @@ def add_product(request):
 
 
 @login_required
-def edit_product(request, pk):
+def edit_product(request, product_id):
     """A view to edit products"""
     if not request.user.is_superuser:
         messages.error(request, "You need admin rights to access this page")
         return redirect("home")
 
-    product = get_object_or_404(Product, pk=pk)
+    product = get_object_or_404(Product, pk=product_id)
 
     if request.method == "POST":
         form = ProductForm(request.POST, request.FILES, instance=product)
@@ -99,12 +102,14 @@ def edit_product(request, pk):
         form = ProductForm(instance=product)
         messages.info(request, f"You are editing {product.title}")
 
+        template = 'products/edit_a_product.html'
+
     context = {
-        "edit": True,
+        # "edit": True,
         "form": form,
         "product": product,
     }
-    return render(request, "products/edit_a_product.html", context)
+    return render(request, template, context)
 
 
 @login_required
