@@ -7,14 +7,14 @@
           Home
           </a>
        </li>
-       <li class="nav-item d-block d-md-none">
+       <li class="nav-item">
           <a class="logo-font font-weight-bold nav-link text-black mr-5" href="{% url 'products' %}">
           All Products
           </a>
        </li>
-       <li class="nav nav-item dropdown">
+       <li class="nav-item dropdown">
           <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" aria-haspopup="true" aria-expanded="false"
-             data-bs-toggle="dropdown">Makeup</a>
+             data-toggle="dropdown">Makeup</a>
           <div class="dropdown-menu border-0" aria-label="makeup">
              <a href="{% url 'products' %}?category=face,eyes,lips,palettes" class="dropdown-item fw-bold">Shop All</a>
              <a href="{% url 'products' %}?category=face" class="dropdown-item">Face</a>
@@ -25,7 +25,7 @@
        </li>
        <li class="nav-item dropdown">
           <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" aria-haspopup="true" aria-expanded="false"
-             data-bs-toggle="dropdown">Skincare</a>
+             data-toggle="dropdown">Skincare</a>
           <div class="dropdown-menu border-0" aria-label="skincare">
              <a href="{% url 'products' %}?category=cleansers_exfoliators,moisturisers,toners_mist,masks,skincare_tools" class="dropdown-item fw-bold">Shop All</a>
              <a href="{% url 'products' %}?category=cleansers_exfoliators" class="dropdown-item">Cleansers &amp; Exfoliators</a>
@@ -37,7 +37,7 @@
        </li>
        <li class="nav-item dropdown">
           <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="bath-and-body-link" aria-haspopup="true"
-             aria-expanded="false" data-bs-toggle="dropdown">Bath &amp; Body</a>
+             aria-expanded="false" data-toggle="dropdown">Bath &amp; Body</a>
           <div class="dropdown-menu border-0" aria-label="bath-and-body">
              <a href="{% url 'products' %}?category=bath_shower,body_moisturisers" class="dropdown-item fw-bold">Shop All</a>
              <a href="{% url 'products' %}?category=bath_shower" class="dropdown-item">Bath &amp; Shower</a>
