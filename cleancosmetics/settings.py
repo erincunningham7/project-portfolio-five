@@ -34,12 +34,12 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    "8000-erincunning-projectport-zpnad977aha.ws-eu110.gitpod.io",
+    "8000-erincunning-projectport-2u5gbr6pc0v.ws-eu110.gitpod.io",
     "clean-cosmetics-ecommerce-app-ddc58ad89794.herokuapp.com",
 ]
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://8000-erincunning-projectport-zpnad977aha.ws-eu110.gitpod.io",
+    "https://8000-erincunning-projectport-2u5gbr6pc0v.ws-eu110.gitpod.io",
     "https://clean-cosmetics-ecommerce-app-ddc58ad89794.herokuapp.com",
 ]
 
