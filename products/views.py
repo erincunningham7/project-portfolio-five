@@ -111,13 +111,13 @@ def edit_product(request, product_id):
 
 
 @login_required
-def delete_product(request, pk):
+def delete_product(request, product_id):
     """A view to delete a product"""
     if not request.user.is_superuser:
         messages.error(request, "You need admin rights to access this page")
         return redirect(reverse("home"))
 
-    product = get_object_or_404(Product, pk=pk)
+    product = get_object_or_404(Product, pk=product_id)
     product.delete()
     messages.success(request, f"{product.title} deleted successfully")
     return redirect(reverse("products"))
