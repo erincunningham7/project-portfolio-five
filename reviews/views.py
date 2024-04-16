@@ -83,48 +83,17 @@ def update_review(request, product_id):
     }
     return render(request, template, context)
 
-    # if request.method == "POST":
-    #     form = UserReviewForm(request.POST)
-    #     if form.is_valid():
-    #         form.save()
-    #         messages.success(request, "Product added successfully.")
-    #         return redirect(reverse("add_product"))
-    #     else:
-    #         messages.error(request, "Invalid form. Try again")
-    # else:
-    #     form = ProductForm()
-
-    # template = "products/add_product.html"
-    # context = {
-    #     "form": form,
-    # }
-
-    # return render(request, template, context)
-
 
 @login_required
 def delete_review(request, product_id):
-    """
-    A view to handle deleting a product review
-    """
-    review = get_object_or_404(UserReview, id=product_id)
+    """A view to delete a review"""
+    user = request.user.userprofile
+    review = get_object_or_404(UserReview, pk=product_id)
     product = review.product
+    if not request.user.is_superuser or not user == review.user:
+        messages.error(request, "You do not have rights to access this page")
+        return redirect(reverse("home"))
 
-    if request.method == "POST":
-        user = request.user.userprofile
-        if request.user.is_superuser or user == review.user:
-            try:
-                review.delete()
-                messages.success(request, "Deleted review successfully!")
-            except ObjectDoesNotExist:
-                messages.error(request, "This review does not exist.")
-
-    return redirect(reverse("product_info", args=[product_id]))
-
-    template = "reviews/delete_review.html"
-    context = {
-        "review": review,
-        "product": product,
-    }
-
-    return render(request, template, context)
+    review.delete()
+    messages.success(request, "Review deleted successfully")
+    return redirect(reverse("product_info", args=[product.id]))
