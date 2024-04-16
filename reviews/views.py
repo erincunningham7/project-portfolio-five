@@ -59,7 +59,8 @@ def update_review(request, product_id):
     product = review.product
 
     if not request.user.is_superuser or not user == review.user:
-        messages.error(request, "You do not have the rights to access this page")
+        messages.error(
+            request, "You do not have the rights to access this page")
         return redirect("home")
 
     if request.method == "POST":
