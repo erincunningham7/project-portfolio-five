@@ -8,13 +8,13 @@
    <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
       <form method="GET" action="{% url 'products' %}" class="form">
          <div class="input-group w-100">
-            <input class="form-control border mx-1 rounded-0" type="text" name="q"
-               placeholder="Search Products" aria-label="search">
+            <input class="form-control border mx-1 rounded-0" type="text" name="q" placeholder="Search Products"
+               aria-label="search">
             <div class="input-group-append">
                <button class="form-control btn btn-black" type="submit" aria-label="search">
-               <span class="search-icon">
-               <i class="fas fa-search" aria-hidden="true"></i>
-               </span>
+                  <span class="search-icon">
+                     <i class="fas fa-search" aria-hidden="true"></i>
+                  </span>
                </button>
             </div>
          </div>
@@ -23,8 +23,8 @@
    <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
       <ul class="list-inline list-unstyled text-center text-lg-right my-0">
          <li class="list-inline-item dropdown">
-            <a class="text-black nav-link" href="#" id="account-options" aria-haspopup="true"
-               aria-expanded="false" data-toggle="dropdown">
+            <a class="text-black nav-link" href="#" id="account-options" aria-haspopup="true" aria-expanded="false"
+               data-toggle="dropdown">
                <div class="text-center mx-3">
                   <div><i class="fas fa-user fa-lg" aria-hidden="true"></i></div>
                   <p class="my-0">My Account</p>
@@ -32,14 +32,14 @@
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="account-options">
                {% if request.user.is_authenticated %}
-                  {% if request.user.is_superuser %}
-                     <a href="{% url 'add_product' %}" class="dropdown-item">Admin</a>
-                  {% endif %}
-                  <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
-                  <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+               {% if request.user.is_superuser %}
+               <a href="{% url 'add_product' %}" class="dropdown-item">Admin</a>
+               {% endif %}
+               <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
+               <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
                {% else %}
-                  <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-                  <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+               <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+               <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
                {% endif %}
             </div>
          </li>
@@ -60,4 +60,3 @@
       </ul>
    </div>
 </div>
-  
