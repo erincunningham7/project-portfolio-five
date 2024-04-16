@@ -61,7 +61,6 @@ def add_product(request):
         messages.error(request, "You need admin rights to access this page")
         return redirect("home")
 
-    # form = ProductForm(request.POST, request.FILES)
     if request.method == "POST":
         form = ProductForm(request.POST, request.FILES)
         if form.is_valid():
@@ -105,7 +104,6 @@ def edit_product(request, product_id):
         template = 'products/edit_a_product.html'
 
     context = {
-        # "edit": True,
         "form": form,
         "product": product,
     }

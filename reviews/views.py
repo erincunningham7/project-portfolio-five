@@ -30,7 +30,6 @@ def add_review(request, product_id):
     """
     product = get_object_or_404(Product, id=product_id)
     user = request.user.userprofile
-    # redirect_url = request.POST.get('redirect_url')
     if request.method == "POST":
         form = UserReviewForm(request.POST)
 
@@ -48,41 +47,59 @@ def add_review(request, product_id):
         return redirect(reverse("product_info", args=[product_id]))
     else:
         form = UserReviewForm()
-    # return redirect(redirect_url)
     context = {"product": product, "form": form}
     return render(request, "reviews/add_review.html", context)
 
 
 @login_required
 def update_review(request, product_id):
-    """
-    A view to handle updating a product review
-    """
-    review = get_object_or_404(UserReview, id=product_id)
+    """A view to update reviews"""
+    user = request.user.userprofile
+    review = get_object_or_404(UserReview, pk=product_id)
     product = review.product
-    form = UserReviewForm(instance=review)
+
+    if not request.user.is_superuser or not user == review.user:
+        messages.error(request, "You do not have the rights to access this page")
+        return redirect("home")
 
     if request.method == "POST":
-        user = request.user.userprofile
-        if request.user.is_superuser or user == review.user:
-            form = UserReviewForm(request.POST, instance=review)
-            if form.is_valid():
-                review = form.save()
-                messages.success(request, "Updated review successfully!")
-                return redirect("product", product.id)
-            messages.error(
-                request,
-                "There was an error updating your review. Please try again."
-            )
+        form = UserReviewForm(request.POST, instance=review)
+        if form.is_valid():
+            form.save()
+            messages.success(request, "Review successfully updated")
+            return redirect(reverse("product_info", args=[product.id]))
         else:
-            messages.error(
-                request,
-                "You are forbidden from updating this review. Please login or register.",
-            )
+            messages.error(request, "Invalid form! Please try again.")
+    else:
+        form = UserReviewForm(instance=review)
+        messages.info(request, f"You are editing {product.title}")
 
-    template = "reviews/update_review.html"
-    context = {"review_form": form, "review": review, "product": product}
+        template = 'reviews/update_review.html'
+
+    context = {
+        "form": form,
+        "review": review,
+        "product": product,
+    }
     return render(request, template, context)
+
+    # if request.method == "POST":
+    #     form = UserReviewForm(request.POST)
+    #     if form.is_valid():
+    #         form.save()
+    #         messages.success(request, "Product added successfully.")
+    #         return redirect(reverse("add_product"))
+    #     else:
+    #         messages.error(request, "Invalid form. Try again")
+    # else:
+    #     form = ProductForm()
+
+    # template = "products/add_product.html"
+    # context = {
+    #     "form": form,
+    # }
+
+    # return render(request, template, context)
 
 
 @login_required
