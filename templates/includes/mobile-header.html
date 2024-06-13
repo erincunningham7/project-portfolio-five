@@ -1,3 +1,4 @@
+<ul>
 <li class="list-inline-item">
     <a class="text-black nav-link d-block d-lg-none" href="#" id="mobile-search" data-toggle="dropdown"
         aria-haspopup="true" aria-expanded="false">
@@ -30,7 +31,7 @@
             <p class="my-0">My Account</p>
         </div>
     </a>
-    <div class="dropdown-menu border-0" aria-label="my-account">
+    <div class="dropdown-menu border-0">
         {% if request.user.is_authenticated %}
         {% if request.user.is_superuser %}
         <a href="{% url 'add_product' %}" class="dropdown-item">Admin</a>
@@ -57,3 +58,4 @@
         </div>
     </a>
 </li>
+</ul>
