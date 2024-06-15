@@ -59,7 +59,7 @@
                         </div>
                      </form>
                      <a class="update-link text-info"><small>Update</small></a>
-                     <a class="remove-item text-danger float-right"
+                     <a class="remove-item text-danger"
                         id="remove_{{ item.item_id }}"><small>Remove</small></a>
                   </td>
                   <td class="py-3">
@@ -68,7 +68,7 @@
                </tr>
                {% endfor %}
                <tr>
-                  <td colspan="5" class="pt-5 text-right">
+                  <td colspan="4">
                      <h6><strong>Subtotal: €{{ total|floatformat:2 }}</strong></h6>
                      <h6>Delivery: €{{ delivery_cost|floatformat:2 }}</h6>
                      <h4 class="mt-4"><strong>Grand Total: €{{ grand_total|floatformat:2 }}</strong></h4>
@@ -80,7 +80,7 @@
                   </td>
                </tr>
                <tr>
-                  <td colspan="5" class="text-right">
+                  <td colspan="4">
                      <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0">
                         <span class="icon">
                            <i class="fas fa-chevron-left"></i>
@@ -94,7 +94,6 @@
                         </span>
                      </a>
                   </td>
-               </tr>
             </table>
          </div>
          {% else %}
@@ -113,7 +112,7 @@
 {% block postloadjs %}
 {{ block.super }}
 {% include 'products/includes/quantity_input_script.html' %}
-<script type="text/javascript">
+<script>
    // Update quantity
    $('.update-link').click(function (e) {
       var form = $(this).prev('.update-form');
