@@ -30,6 +30,11 @@ body {
     color: grey;
 }
 
+.mobile-nav {
+    padding: 0;
+    margin: -2rem;
+}
+
 /* Products */
 
 .product-info {
@@ -131,17 +136,6 @@ body {
 
 #social-links a i:hover {
     color: var(--light-green);
-}
-
-.navbar-expand {
-    position: relative;
-    display: flex;
-    padding: 0;
-}
-
-.navbar ul {
-    padding: 0;
-    margin: -2rem;
 }
 
 .card-img-top {
