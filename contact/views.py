@@ -27,6 +27,5 @@ class ContactView(FormView):
 
     def form_valid(self, form):
         user = form.save()
-        
-        return super(ContactView, self).form_valid(form)
 
+        return super(ContactView, self).form_valid(form)
