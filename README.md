@@ -2,7 +2,7 @@
 
 [Link to live site](https://clean-cosmetics-ecommerce-app-ddc58ad89794.herokuapp.com/)
 
-Clean Cosmetics is an ecommerce application specifically design to facilitate commercial transactions, and involves an online transfer of information. For my resu
+Clean Cosmetics is an ecommerce application specifically design to facilitate commercial transactions, and involves an online transfer of information.
 
 # Table Of Contents
 
@@ -39,6 +39,7 @@ Clean Cosmetics is an ecommerce application specifically design to facilitate co
     -   [Cloning Repository](#cloning-repository)
 -   [Credits](#credits)
     -   [Code](#code)
+    [Resubmission](#resubmission)
 
 ## User Experience
 
@@ -428,7 +429,7 @@ The target customers for this online beauty store expand over a wide demographic
 ||When a user clicks Edit Bag they are taken back to the Bag page| Pass | |
 ||When a user clicks Complete Order the Success toast appears with the Thank You page displaying the order details and order confirmation| Pass | |
 
-Authentication
+- Authentication
 
 |Log in| Users who have previously logged in can log in successfully| Pass | | 
 |Sign Up|Users can sign up and receive a verification link in their email| Pass | | 
@@ -593,5 +594,15 @@ The project will now have been cloned on your local machine for use.
 - [Django Allauth Documentation](https://docs.allauth.org/en/latest/installation/quickstart.html) was used to install the allauth library and styling
 -[Crispy Forms docs](https://django-crispy-forms.readthedocs.io/en/latest/install.html) was used to install the crispy forms package
 
+## Resubmission
+
+For my project resubmission I focused on the following:
+
+- Ensuring the contact model saves to the database successfuly
+- Toasts can be closed successfully with the "X" button
+- After clicking email verification, 404 error page is not displayed anymore
+- Making the site more UX friendly by fixing the navbar on mobile screen sizes
+- Display order history pages successfully
+- Sending confirmation emails successfully
 
 
