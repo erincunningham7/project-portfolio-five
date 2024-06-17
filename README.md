@@ -2,7 +2,7 @@
 
 [Link to live site](https://clean-cosmetics-ecommerce-app-ddc58ad89794.herokuapp.com/)
 
-Clean Cosmetics is an ecommerce application specifically design to facilitate commercial transactions, and involves an online transfer of information.
+Clean Cosmetics is an ecommerce application specifically design to facilitate commercial transactions, and involves an online transfer of information. For my resu
 
 # Table Of Contents
 
@@ -363,16 +363,6 @@ The target customers for this online beauty store expand over a wide demographic
 
 ### Bugs
 
-- Known Bugs
-
-If I had more time the following bugs would have been successfully closed.
-
-1. The edit review page does not successfully display the submitted form that needs to be edited.
-2. The admins order status form was not completed.
-3. The X button does not successfully close the toasts.
-4. The country field in the address form is disproportionate.
-5. The navbar is disproportiante on medium and small screens, with some of it disappearing completely.
-
 - Home Page
 
 |Section|Test Action|Expected Result|Pass/Fail|Comments|
@@ -381,11 +371,18 @@ If I had more time the following bugs would have been successfully closed.
 ||Click on the links in Navbar|Redirect to correct page |Pass|Navbar present on all pages | |
 ||Click on the links in My Account|All redirect to correct page |Pass|
 ||Click on the cart icon| Redirect to shopping cart |Pass|
+||Change screen size to mobile| Hamburger menu appears and icons|Pass|
 |Searchbar|type keywords|returns correct results |Pass|searchabar present on all pages |
 |Hero section|Open Home page. Ensure the hero section loads as it should|Hero section loads as it should |Pass| |
-|Hero section|Click on the dive in button, ensure it leads to products page|It leads to products page |Pass| |
+||Click on the dive in button, ensure it leads to products page|It leads to products page |Pass| |
 |Product page| Click on the product card button. Ensure it redirects to the correct single product page |When clicked each card redirects to the correct single product page |Pass| |
 || Click on the product card button add to cart. Ensure the item is added to cart |When clicked each card button adds the corresponding product to cart |Pass| |
+|| Click on the Products button| All products on the website are shown| Pass | |
+|| Click on the Makeup button| All makeup products appear and the correct dropdown menu with the corresponding products appear| Pass | |
+|| Click on the Skincare button| All skincare products appear and the correct dropdown menu with the corresponding products appear| Pass | |
+|| Click on the Bath&Body button| All Bath&Body products appear and the correct dropdown menu with the corresponding products appear| Pass | |
+|| Click on the Contact Us button| The contact form appears and when filled out it saves to the database in the admin| Pass | |
+|| Click on the Trending Topics button| The articles appear and users are able to Read More to read the content in full| Pass | |
 |Newsletter| Enter valid email. Ensure the thank you fo subscribing text appears |Pass| |
 |Footer|Click on all of the social links in the footer. Ensure each external link opens the correct page in a new tab |All external links open the correct page in a new tab |Pass| |
 
@@ -394,8 +391,13 @@ If I had more time the following bugs would have been successfully closed.
 |Section|Test Action|Expected Result|Pass/Fail|Comments|
 | ---| ---| ---| ---| ---|
 |Product details|Open the product page. Ensure all the relevant information is correct for the specific product|All the relevant information is correct for the specific product|Pass||
-||Click add to cart button and ensure the product is added to cart|When clicked the product is added to cart |Pass||
-|reviews|Select reviews tag and ensure reviews is displayed| reviews is displayed |Pass||
+||Click add to cart button and ensure the product is added to cart and toast appears|Pass||
+|Reviews|Select reviews tag and ensure reviews is displayed| reviews is displayed |Pass||
+||Authenticated users can see the Review button and fill out the form and submit it succesfully| Pass | |
+||Admin can see the Edit button to edit the product information and update it successfully| Pass | |
+||Admin can see the Delete button to delete a product entirely| Pass | |
+||Users can use the quantity button successfully to update the product count| Pass | |
+||The Keep Shopping button redirects users back to the All Products page successfully| Pass | |
 
 - Shopping Cart 
 
@@ -404,8 +406,14 @@ If I had more time the following bugs would have been successfully closed.
 |Shopping cart|Add product to cart and ensure it appears correctly in the cart|The product appears correctly in the cart|Pass||
 |Product|Click on product link and ensure it leads to the product page.|The link leads to the product page|Pass||
 |Update quantity|From the drop down select new quantity and update. Ensure the total is calculated correctly|The product updates correctly in the cart|Pass||
-|remove product|Click on the remove button and ensure the product is removed from cart|The product is removed from the cart|Pass||
-|remove discount|After discount has been applied click on the remove button and ensure the total is calculated and a message appears|The total is calculated and a message appears|Pass||
+|Remove product|Click on the remove button and ensure the product is removed from cart|The product is removed from the cart|Pass||
+|Subtotal|The subtotal displays and is the correct amount| Pass | |
+|Delivery|The delivery displays successfully| Pass | |
+|Grand Total|The grand total combines both the subtotal and the delivery successfully and displays on the page| Pass | |
+|Free delivery|When the subtotal is 60 or over free delivery is discounted from the bag| Pass | | 
+||When the subtotal is less than 60 text appears urging the user to spend more to get the subtotal to 60 for free delivery| Pass | |
+|Continue Shopping|The continue shopping button redirects back to the All Products page| Pass | |
+|Secure Checkout|The secure checkout button directs users to the checkout page| Pass | |
 
 - Checkout
 
@@ -413,20 +421,27 @@ If I had more time the following bugs would have been successfully closed.
 | ---| ---| ---| ---| ---|
 |Checkout|Fill in the form and click on save details. Use stripe test card and confirm the order is successfull by checking stripe. Confirm the address is saved to profile|The address is saved to my profile. The purchase is successfull. Stripe logs show success.|Pass||
 |Checkout|Visit the page as unauthenticated user. Ensure the form is not prefilled and does not allow to save details|The form is not prefilled and does not allow to save details.|Pass||
-|Checkout|Click on back button and ensure it takes the user to the products page|The back button work as it should.|Pass||
+|Checkout Page|The checkout form displays successfully with the users information if it has already been saved to their profile| Pass | | 
+||The order summary displays the items in the bag, the order total, delivery and grand total successfully with the correct information| Pass | |
+||When a user clicks the Save this delivery information to my profile checkbox the information is saved successfully to their Profile| Pass | | 
+||When a user clicks Complete Order all required fields must be filled out for the form to submit| Pass | |
+||When a user clicks Edit Bag they are taken back to the Bag page| Pass | |
+||When a user clicks Complete Order the Success toast appears with the Thank You page displaying the order details and order confirmation| Pass | |
+
+Authentication
+
+|Log in| Users who have previously logged in can log in successfully| Pass | | 
+|Sign Up|Users can sign up and receive a verification link in their email| Pass | | 
+|Logout| Users can logout successfully| Pass | |
+||Users can save their login information for faster login the next time| Pass | |
+
 
 - My Profile
 
 |Section|Test Action|Expected Result|Pass/Fail|Comments|
 | ---| ---| ---| ---| ---|
-|Profile|Fill in the form and click on update. Ensure the details are updated|The details are updated|Fail|The full name field does not update|
-
-- My Orders
-
-|Section|Test Action|Expected Result|Pass/Fail|Comments|
-| ---| ---| ---| ---| ---|
-|Orders|Open the orders page and ensure the orders showing are correct. |The orders are correct|Pass||
-|Orders |Click on the order link and ensure it leads to the order page|The link leads to the order page|Pass||
+|Profile|Fill in the form and click on update. Ensure the details are updated and success toasts appears |The details are updated| Pass | |
+|Order history| All of the previous orders made by the user are displayed and can be accessed| Pass | |
 
 - Admin
 
