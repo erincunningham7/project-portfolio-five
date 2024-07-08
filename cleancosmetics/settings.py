@@ -38,7 +38,7 @@ ALLOWED_HOSTS = [
 ]
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://8000-erincunning-projectport-fbv3d2mmbww.ws-eu115.gitpod.io/",
+    "https://8000-erincunning-projectport-fbv3d2mmbww.ws-eu115.gitpod.io",
     "https://clean-cosmetics-ecommerce-app-ddc58ad89794.herokuapp.com",
 ]
 
