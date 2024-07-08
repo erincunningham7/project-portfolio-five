@@ -30,7 +30,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
     "8000-erincunning-projectport-v1czm50mh8s.ws.codeinstitute-ide.net",
@@ -69,7 +69,7 @@ INSTALLED_APPS = [
     # Other
     "crispy_forms",
     "cloudinary",
-    "cloudinary_storage",
+    # "cloudinary_storage",
 ]
 
 MIDDLEWARE = [
@@ -81,7 +81,6 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
-    "allauth.account.middleware.AccountMiddleware",
 ]
 
 ROOT_URLCONF = "cleancosmetics.urls"
