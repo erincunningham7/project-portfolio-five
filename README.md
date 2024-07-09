@@ -428,15 +428,20 @@ The target customers for this online beauty store expand over a wide demographic
 |Complete order fields|Click the complete order button|When a user clicks Complete Order all required fields must be filled out for the form to submit| Pass | |
 |Edit bag|Click the edit bag button|When a user clicks Edit Bag they are taken back to the Bag page| Pass | |
 |Complete order|Click the complete order button|When a user clicks Complete Order the Success toast appears with the Thank You page displaying the order details and order confirmation| Pass | |
+|Confirmation email|Check email inbox after successful purchase|Order confirmation email is present|Pass| |
 
 - Authentication
 
 |Section|Test Action|Expected Result|Pass/Fail|Comments|
 | ---| ---| ---| ---| ---|
-||Log in| Users who have previously logged in can log in successfully| Pass | | 
-||Sign Up|Users can sign up and receive a verification link in their email| Pass | | 
-||Logout| Users can logout successfully| Pass | |
-||Saved Info| Users can save their login information for faster login the next time| Pass | |
+|Log in|Log in to the site|Users who have previously logged in can log in successfully| Pass | | 
+|Sign Up|Register an account on the site|Users can sign up and receive a verification link in their email| Pass | | 
+|Logout|Logout of account after logging in successfully|Users can logout successfully| Pass | |
+|Saved Info|Login again after clicking the remember me checkbox|Users can save their login information for faster login the next time| Pass | |
+|Email verification|After sign up, check email verification page is displayed|Page is displayed| Pass | |
+| |Check inbox for verification email|Email is present| Pass | |
+| |Click on link in verification email|Link works as expected| Pass | |
+| |Log in again after following the verification steps| Account is verified| Pass | |
 
 
 - My Profile
