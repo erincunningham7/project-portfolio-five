@@ -620,6 +620,7 @@ For my project resubmission I focused on the following:
  - Displaying orders with shipping price and grand total
     - Firstly, to address the shipping price issue, I went back over the Boutique Ado walkthrough particularly the Checkout section. I discovered that I was excluding an important if statement from my bag_contents function in th contexts.py. After addressing that, I added another important if statement to the update_total function in models.py to calculate the free delivery threshold. Finally I added the free_delivery_threshold to settings.py and the problem was solved.
     - To display the order_total and grand_total on the checkout_success page, order history in the profiles page, and in the database, I called the update_total function in the checkout view on line 91.
-
+- Validation
+    - I ensured each url passed the validator with no errors.
 
 
