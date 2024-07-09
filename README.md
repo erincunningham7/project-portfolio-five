@@ -392,13 +392,13 @@ The target customers for this online beauty store expand over a wide demographic
 |Section|Test Action|Expected Result|Pass/Fail|Comments|
 | ---| ---| ---| ---| ---|
 |Product details|Open the product page. Ensure all the relevant information is correct for the specific product|All the relevant information is correct for the specific product|Pass||
-||Click add to cart button and ensure the product is added to cart and toast appears|Pass||
-|Reviews|Select reviews tag and ensure reviews is displayed| reviews is displayed |Pass||
-||Authenticated users can see the Review button and fill out the form and submit it succesfully| Pass | |
-||Admin can see the Edit button to edit the product information and update it successfully| Pass | |
-||Admin can see the Delete button to delete a product entirely| Pass | |
-||Users can use the quantity button successfully to update the product count| Pass | |
-||The Keep Shopping button redirects users back to the All Products page successfully| Pass | |
+|Add to cart|Click add to cart button and ensure the product is added to cart and toast appears|Product adds to cart and toast appears|Pass||
+|Reviews|Select reviews tag and ensure reviews are displayed| Reviews are displayed |Pass||
+||Authenticated users can see the Review button and fill out the form and submit it succesfully|Form appears and is fillable|Pass | |
+|Admin|Admin can see the Edit button to edit the product information and update it successfully|Edit button is present and editing works as expected|Pass | |
+||Admin can see the Delete button to delete a product entirely|Delete button is present and product is deleted|Pass | |
+|Quantity|Users can use the quantity button successfully to update the product count|Quantity button is present and works as expected|Pass | |
+|Keep Shopping|The Keep Shopping button redirects users back to the All Products page successfully|When clicked the button redirects successfully|Pass | |
 
 - Shopping Cart 
 
