@@ -444,7 +444,7 @@ The target customers for this online beauty store expand over a wide demographic
 |Section|Test Action|Expected Result|Pass/Fail|Comments|
 | ---| ---| ---| ---| ---|
 |Profile|Fill in the form and click on update. Ensure the details are updated and success toasts appears |The details are updated| Pass | |
-|Order history| All of the previous orders made by the user are displayed and can be accessed| Pass | |
+|Order history|Click the my profile button and view and access the order history individually|All of the previous orders made by the user are displayed and can be accessed| Pass | |
 
 - Admin
 
