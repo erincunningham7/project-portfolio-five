@@ -5,7 +5,7 @@ Thank you for choosing Clean Cosmetics! This email is to confirm that we have re
 {% for item in order.lineitems.all %}
 Title: {{item.product.title }},
 Quantity: {{ item.quantity }},
-Price:  €{{ item.product.product_price }}
+Price:  €{{ item.product.price }}
 {% endfor %}
 {% if order.discount %}
 Discount: € {{ order.discount }}
