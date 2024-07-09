@@ -384,7 +384,7 @@ The target customers for this online beauty store expand over a wide demographic
 || Click on the Bath&Body button| All Bath&Body products appear and the correct dropdown menu with the corresponding products appear| Pass | |
 || Click on the Contact Us button| The contact form appears and when filled out it saves to the database in the admin| Pass | |
 || Click on the Trending Topics button| The articles appear and users are able to Read More to read the content in full| Pass | |
-|Newsletter| Enter valid email. Ensure the thank you fo subscribing text appears |Pass| |
+|Newsletter| Enter valid email. Ensure the thank you fo subscribing text appears||Pass| |
 |Footer|Click on all of the social links in the footer. Ensure each external link opens the correct page in a new tab |All external links open the correct page in a new tab |Pass| |
 
 - Single Product Page 
