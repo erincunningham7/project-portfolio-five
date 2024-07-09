@@ -420,14 +420,14 @@ The target customers for this online beauty store expand over a wide demographic
 
 |Section|Test Action|Expected Result|Pass/Fail|Comments|
 | ---| ---| ---| ---| ---|
-|Checkout|Fill in the form and click on save details. Use stripe test card and confirm the order is successfull by checking stripe. Confirm the address is saved to profile|The address is saved to my profile. The purchase is successfull. Stripe logs show success.|Pass||
+|Checkout|Fill in the form and click on save details. Use stripe test card and confirm the order is successful by checking stripe. Confirm the address is saved to profile|The address is saved to my profile. The purchase is successfull. Stripe logs show success.|Pass||
 |Checkout|Visit the page as unauthenticated user. Ensure the form is not prefilled and does not allow to save details|The form is not prefilled and does not allow to save details.|Pass||
-|Checkout Page|The checkout form displays successfully with the users information if it has already been saved to their profile| Pass | | 
-||The order summary displays the items in the bag, the order total, delivery and grand total successfully with the correct information| Pass | |
-||When a user clicks the Save this delivery information to my profile checkbox the information is saved successfully to their Profile| Pass | | 
-||When a user clicks Complete Order all required fields must be filled out for the form to submit| Pass | |
-||When a user clicks Edit Bag they are taken back to the Bag page| Pass | |
-||When a user clicks Complete Order the Success toast appears with the Thank You page displaying the order details and order confirmation| Pass | |
+|Checkout Page|Open the checkout page with the secure checkout button|The checkout form displays successfully with the users information if it has already been saved to their profile| Pass | | 
+|Order Summary|Check the order summary information during checkout|The order summary displays the items in the bag, the order total, delivery and grand total successfully with the correct information| Pass | |
+|Save delivery|Click the checkbox to save delivery information|When a user clicks the Save this delivery information to my profile checkbox the information is saved successfully to their Profile| Pass | | 
+|Complete order fields|Click the complete order button|When a user clicks Complete Order all required fields must be filled out for the form to submit| Pass | |
+|Edit bag|Click the edit bag button|When a user clicks Edit Bag they are taken back to the Bag page| Pass | |
+|Complete order|Click the complete order button|When a user clicks Complete Order the Success toast appears with the Thank You page displaying the order details and order confirmation| Pass | |
 
 - Authentication
 
