@@ -431,6 +431,8 @@ The target customers for this online beauty store expand over a wide demographic
 
 - Authentication
 
+|Section|Test Action|Expected Result|Pass/Fail|Comments|
+| ---| ---| ---| ---| ---|
 ||Log in| Users who have previously logged in can log in successfully| Pass | | 
 ||Sign Up|Users can sign up and receive a verification link in their email| Pass | | 
 ||Logout| Users can logout successfully| Pass | |
