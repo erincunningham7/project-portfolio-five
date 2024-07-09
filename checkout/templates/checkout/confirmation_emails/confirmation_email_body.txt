@@ -10,9 +10,9 @@ Price:  €{{ item.product.price }}
 {% if order.discount %}
 Discount: € {{ order.discount }}
 {% endif %}
-Order Total: € {{ order.order_total }}
-Delivery: € {{ order.delivery_cost }}
-Grand Total: € {{ order.grand_total }}
+Order Total: € {{ order_total }}
+Delivery: € {{ delivery_cost }}
+Grand Total: € {{ grand_total }}
 
 Delivery Address: 
 {{ order.street_address1 }},
