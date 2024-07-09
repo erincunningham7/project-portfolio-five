@@ -408,13 +408,13 @@ The target customers for this online beauty store expand over a wide demographic
 |Product|Click on product link and ensure it leads to the product page.|The link leads to the product page|Pass||
 |Update quantity|From the drop down select new quantity and update. Ensure the total is calculated correctly|The product updates correctly in the cart|Pass||
 |Remove product|Click on the remove button and ensure the product is removed from cart|The product is removed from the cart|Pass||
-|Subtotal|The subtotal displays and is the correct amount| Pass | |
-|Delivery|The delivery displays successfully| Pass | |
-|Grand Total|The grand total combines both the subtotal and the delivery successfully and displays on the page| Pass | |
-|Free delivery|When the subtotal is 60 or over free delivery is discounted from the bag| Pass | | 
-||When the subtotal is less than 60 text appears urging the user to spend more to get the subtotal to 60 for free delivery| Pass | |
-|Continue Shopping|The continue shopping button redirects back to the All Products page| Pass | |
-|Secure Checkout|The secure checkout button directs users to the checkout page| Pass | |
+|Subtotal|Check the subtotal amount displayed|The subtotal displays and is the correct amount| Pass | |
+|Delivery|Check the delivery amount displayed|The delivery displays successfully| Pass | |
+|Grand Total|Check the grand total amount|The grand total combines both the subtotal and the delivery successfully and displays on the page| Pass | |
+|Free delivery|Add products worth over 60 euro to the bag and check the delivery amount|When the subtotal is 60 or over free delivery is discounted from the bag| Pass | | 
+||Add products worth less than 60 euro to the bag and check the delivery amount and urgent red text|When the subtotal is less than 60 text appears urging the user to spend more to get the subtotal to 60 for free delivery| Pass | |
+|Continue Shopping|Click the continue shopping button|The continue shopping button redirects back to the All Products page| Pass | |
+|Secure Checkout|Click the secure checkout button|The secure checkout button directs users to the checkout page| Pass | |
 
 - Checkout
 
