@@ -601,10 +601,20 @@ The project will now have been cloned on your local machine for use.
 For my project resubmission I focused on the following:
 
 - Ensuring the contact model saves to the database successfuly
+    - In the views.py I added the code to successfully redirect once the contact form has been submitted, but more importantly I defined the form_valid function to save the data to the database successfully.
 - Toasts can be closed successfully with the "X" button
+    - To achieve this I changed the javascript functionality in base.html to enable the dismissal of alerts. In the toast html files I added the data-dismiss="alert" to trigger the javascript functionality.
 - After clicking email verification, 404 error page is not displayed anymore
+    - To achieve this I simply added a / on the end of the LOGIN_URL on line 134 in settings.py
 - Making the site more UX friendly by fixing the navbar on mobile screen sizes
+    - To achieve this I modified the mobile header using CSS
 - Display order history pages successfully
+    - To display the order history pages on the profile page, I changed the url path from path("order_history/<pk>", views.order_history, name="order_history") to path("order_history/<order_number>", views.order_history, name="order_history"). I subsequently changed the order history function in views.py to to align with the new url path and access each past order as expected.
 - Sending confirmation emails successfully
+    - To achieve this I changed my Stripe webhooks to access both the live server and the deployed app and create successful payments. I changed the signed secret keys and email_host_pass keys respectively and the problen was solved. Emails displayed both in the terminal and in several different gmail inboxes that I tested.
+ - Displaying orders with shipping price and grand total
+    - Firstly, to address the shipping price issue, I went back over the Boutique Ado walkthrough particularly the Checkout section. I discovered that I was excluding an important if statement from my bag_contents function in th contexts.py. After addressing that, I added another important if statement to the update_total function in models.py to calculate the free delivery threshold. Finally I added the free_delivery_threshold to settings.py and the problem was solved.
+    - To display the order_total and grand_total on the checkout_success page, order history in the profiles page, and in the database, I called the update_total function in the checkout view on line 91.
+
 
 
