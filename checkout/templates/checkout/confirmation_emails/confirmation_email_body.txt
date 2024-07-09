@@ -7,9 +7,6 @@ Title: {{item.product.title }},
 Quantity: {{ item.quantity }},
 Price:  €{{ item.product.price }}
 {% endfor %}
-{% if order.discount %}
-Discount: € {{ order.discount }}
-{% endif %}
 Order Total: € {{ order.order_total }}
 Delivery: € {{ order.delivery_cost }}
 Grand Total: € {{ order.grand_total }}
