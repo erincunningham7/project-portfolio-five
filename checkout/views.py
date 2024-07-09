@@ -87,6 +87,8 @@ def checkout(request):
                     messages.error(request, ("Unknown item in shopping cart"))
                     order.delete()
                     return redirect(reverse("shopping_bag"))
+
+            order.update_total()
             request.session["save_info"] = "save-info" in request.POST
             return redirect(reverse("checkout_success",
                                     args=[order.order_number]))
