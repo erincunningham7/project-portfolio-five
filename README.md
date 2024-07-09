@@ -39,7 +39,7 @@ Clean Cosmetics is an ecommerce application specifically design to facilitate co
     -   [Cloning Repository](#cloning-repository)
 -   [Credits](#credits)
     -   [Code](#code)
-    [Resubmission](#resubmission)
+    -   [Resubmission](#resubmission)
 
 ## User Experience
 
