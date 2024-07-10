@@ -494,9 +494,9 @@ The settings.py file did not successfully pass the python validator due to the A
 
 ![Newsletter admin.py](static/images/python-linter-newsletter-admin.png)
 
-![Newsletter forms.py]()
+![Newsletter forms.py](static/images/python-linter-newsletter-forms.png)
 
-![Newsletter models.py]()
+![Newsletter models.py](static/images/python-linter-newsletter-models.png)
 
 ![Newsletter urls.py]()
 
