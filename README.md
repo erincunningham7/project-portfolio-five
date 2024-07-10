@@ -386,6 +386,10 @@ The target customers for this online beauty store expand over a wide demographic
 
 ![Signup Page](static/images/html-validator-signup.png)
 
+- CSS Validator Results
+
+![CSS Validation](static/images/css-validation.png)
+
 - Home Page
 
 |Section|Test Action|Expected Result|Pass/Fail|Comments|
