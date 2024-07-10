@@ -428,6 +428,12 @@ The target customers for this online beauty store expand over a wide demographic
 
 ![Checkout webhooks.py](static/images/python-linter-checkout-webhooks.png)
 
+4. Clean Cosmetics
+
+![Clean cosmetics settings.py]()
+
+![Clean cosmetics urls.py]()
+
 - Home Page
 
 |Section|Test Action|Expected Result|Pass/Fail|Comments|
