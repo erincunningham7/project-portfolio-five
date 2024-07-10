@@ -753,7 +753,7 @@ For my project resubmission I focused on the following:
 - After clicking email verification, 404 error page is not displayed anymore
     - To achieve this I simply added a / on the end of the LOGIN_URL on line 134 in settings.py
 - Making the site more UX friendly by fixing the navbar on mobile screen sizes
-    - To achieve this I modified the mobile header using CSS
+    - To achieve this I modified the mobile header using CSS and fixed the overflow-x issue by wrapping the block content on base.html in a <main>.
 - Display order history pages successfully
     - To display the order history pages on the profile page, I changed the url path from path("order_history/<pk>", views.order_history, name="order_history") to path("order_history/<order_number>", views.order_history, name="order_history"). I subsequently changed the order history function in views.py to to align with the new url path and access each past order as expected.
 - Sending confirmation emails successfully
@@ -761,7 +761,5 @@ For my project resubmission I focused on the following:
  - Displaying orders with shipping price and grand total
     - Firstly, to address the shipping price issue, I went back over the Boutique Ado walkthrough particularly the Checkout section. I discovered that I was excluding an important if statement from my bag_contents function in th contexts.py. After addressing that, I added another important if statement to the update_total function in models.py to calculate the free delivery threshold. Finally I added the free_delivery_threshold to settings.py and the problem was solved.
     - To display the order_total and grand_total on the checkout_success page, order history in the profiles page, and in the database, I called the update_total function in the checkout view on line 91.
-- Validation
-    - I ensured each url passed the validator with no errors.
-
-
+- Testing
+    - I ensured the html, css and python validators showed no errors, documenting each validation with screenshots provided.
