@@ -424,7 +424,9 @@ The target customers for this online beauty store expand over a wide demographic
 
 ![Checkout views.py](static/images/python-linter-checkout-views.png)
 
-![Checkout webhook_handler.py]()
+![Checkout webhook_handler.py](static/images/python-linter-checkout-webhook.png)
+
+![Checkout webhooks.py](static/images/python-linter-checkout-webhooks.png)
 
 - Home Page
 
