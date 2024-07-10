@@ -38,8 +38,8 @@ ALLOWED_HOSTS = [
 ]
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://8000-erincunning-projectport-v1czm50mh8s.ws.codeinstitute-ide.net",
     "https://clean-cosmetics-ecommerce-app-ddc58ad89794.herokuapp.com",
+    os.environ.get("CSRF_TRUSTED_ORIGINS"),
 ]
 
 # Application definition
@@ -125,7 +125,6 @@ EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 
 ACCOUNT_AUTHENTICATION_METHOD = "username_email"
 ACCOUNT_EMAIL_VERIFICATION = "mandatory"
-# MAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
 ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_SIGNUP_EMAIL_ENTER_TWICE = True
 ACCOUNT_SIGNUP_PASSWORD_ENTER_TWICE = True
