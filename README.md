@@ -405,7 +405,6 @@ The target customers for this online beauty store expand over a wide demographic
 |Section|Test Action|Expected Result|Pass/Fail|Comments|
 | ---| ---| ---| ---| ---|
 |Shopping cart|Add product to cart and ensure it appears correctly in the cart|The product appears correctly in the cart|Pass||
-|Product|Click on product link and ensure it leads to the product page.|The link leads to the product page|Pass||
 |Update quantity|From the drop down select new quantity and update. Ensure the total is calculated correctly|The product updates correctly in the cart|Pass||
 |Remove product|Click on the remove button and ensure the product is removed from cart|The product is removed from the cart|Pass||
 |Subtotal|Check the subtotal amount displayed|The subtotal displays and is the correct amount| Pass | |
