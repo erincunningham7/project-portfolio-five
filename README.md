@@ -464,7 +464,29 @@ The settings.py file did not successfully pass the python validator due to the A
 
 ![Products urls.py](static/images/python-linter-products-urls.png)
 
-![Products views.py]()
+![Products views.py](static/images/python-linter-products-views.png)
+
+8. Profiles
+
+![Profiles forms.py](static/images/python-linter-profiles-forms.png)
+
+![Profiles models.py](static/images/python-linter-profiles-models.png)
+
+![Profiles urls.py](static/images/python-linter-profiles-urls.png)
+
+![Profiles views.py](static/images/python-linter-profiles-views.png)
+
+9. Reviews
+
+![Reviews admin.py](static/images/python-linter-reviews-admin.png)
+
+![Reviews forms.py](static/images/python-linter-reviews-forms.png)
+
+![Reviews models.py](static/images/python-linter-reviews-models.png)
+
+![Reviews urls.py](static/images/python-linter-reviews-urls.png)
+
+![Reviews views.py](static/images/python-linter-reviews-views.png)
 
 - Home Page
 
