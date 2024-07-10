@@ -35,6 +35,15 @@ body {
     margin: -2rem;
 }
 
+.mobile-link {
+    color: black;
+    font-weight: 600;
+}
+
+.mobile-link:hover {
+    color: grey;
+}
+
 /* Products */
 
 .product-info {
