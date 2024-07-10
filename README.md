@@ -430,9 +430,41 @@ The target customers for this online beauty store expand over a wide demographic
 
 4. Clean Cosmetics
 
-![Clean cosmetics settings.py]()
+![Clean cosmetics settings.py](static/images/python-linter-cleancosmetics-settings.png)
 
-![Clean cosmetics urls.py]()
+The settings.py file did not successfully pass the python validator due to the AUTH_PASSWORD_VALIDATORS. These are needed for password validation and I could not find a way to format these without interferring with their intended purpose.
+
+![Clean cosmetics urls.py](static/images/python-linter-cleancosmetics-urls.png)
+
+5. Contact
+
+![Contact admin.py](static/images/python-linter-contact-admin.png)
+
+![Contact forms.py](static/images/python-linter-contact-forms.png)
+
+![Contact models.py](static/images/python-linter-contact-models.png)
+
+![Contact urls.py](static/images/python-linter-contact-urls.png)
+
+![Contact views.py](static/images/python-linter-contact-views.png)
+
+6. Home
+
+![Home urls.py](static/images/python-linter-home-urls.png)
+
+![Home views.py](static/images/python-linter-home-views.png)
+
+7. Products
+
+![Products admin.py](static/images/python-linter-products-admin.png)
+
+![Products forms.py](static/images/python-linter-products-forms.png)
+
+![Products models.py](static/images/python-linter-products-models.png)
+
+![Products urls.py](static/images/python-linter-products-urls.png)
+
+![Products views.py]()
 
 - Home Page
 
