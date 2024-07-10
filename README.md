@@ -374,6 +374,8 @@ The target customers for this online beauty store expand over a wide demographic
 
 ![Contact Page](static/images/html-validator-contact.png)
 
+![Newsletter Page](static/images/html-validator-newsletter.png)
+
 ![Login Page](static/images/html-validator-login.png)
 
 ![Product Page](static/images/html-validator-products-1.png)
@@ -488,6 +490,18 @@ The settings.py file did not successfully pass the python validator due to the A
 
 ![Reviews views.py](static/images/python-linter-reviews-views.png)
 
+10. Newsletter
+
+![Newsletter admin.py](static/images/python-linter-newsletter-admin.png)
+
+![Newsletter forms.py]()
+
+![Newsletter models.py]()
+
+![Newsletter urls.py]()
+
+![Newsletter views.py]()
+
 - Home Page
 
 |Section|Test Action|Expected Result|Pass/Fail|Comments|
@@ -590,6 +604,15 @@ The settings.py file did not successfully pass the python validator due to the A
 ||Submit contact form|Thank you for contacting us message appears|Pass||
 ||Submit the contact form|Form is saved in the database|Pass||
 ||Try submitting without * mandatory fields|Form will not submit|Pass||
+
+- Newsletter Page
+
+|Section|Test Action|Expected Result|Pass/Fail|Comments|
+| ---| ---| ---| ---| ---|
+||Click the Newsletter heading|Form appears and is fillable|Pass||
+||Submit newsletter form|Thank you for subscribing message appears|Pass||
+||Submit the newsletter form|Form input is saved in the database|Pass||
+||Try submitting without the * mandatory email field|Form will not submit|Pass||
 
 - Trending Topics
 
@@ -763,3 +786,5 @@ For my project resubmission I focused on the following:
     - To display the order_total and grand_total on the checkout_success page, order history in the profiles page, and in the database, I called the update_total function in the checkout view on line 91.
 - Testing
     - I ensured the html, css and python validators showed no errors, documenting each validation with screenshots provided.
+- Newsletter
+    - I created an extra custom model for extra security with my custom models on submission. The newsletter saves the inputted email to the database.
