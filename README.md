@@ -31,6 +31,7 @@ Clean Cosmetics is an ecommerce application specifically design to facilitate co
     - [Basic Testing](#basic-testing)
     - [Responsiveness](#responsiveness)
     - [Browsers](#browsers)
+    - [Lighthouse Reports](#lighthouse)
 -   [Technologies And Languages](#technologies-and-languages)
     -   [Languages Used](#languages-used)
     -   [Python Modules](#python-modules)
@@ -668,6 +669,24 @@ All stripe events and webhooks have been tested and are working sufficiently.
 - Home page on opera
 
 ![Home page on opera](static/images/color-palette-pp5.png)
+
+### Lighthouse
+
+- Products page report on desktop
+
+![Lighthouse report on product page](static/images/lighthouse-category-desktop.png)
+
+- Contact page report on desktop
+
+![Lighthouse report on contact page](static/images/lighthouse-contact-desktop.png)
+
+- Bag page report on desktop
+
+![Lighthouse report on bag page](static/images/lighthouse-bag-desktop.png)
+
+- Home page report on desktop
+
+![Lighthouse report on home page](static/images/lighthouse-desktop.png)
 
 ## Technologies And Languages
 
