@@ -390,6 +390,16 @@ The target customers for this online beauty store expand over a wide demographic
 
 ![CSS Validation](static/images/css-validation.png)
 
+- Python Code Validatior Results
+
+- Bag
+
+![Bag contexts.py](static/images/python-linter-bag-contexts.png)
+
+![Bag urls.py](static/images/python-linter-bag-urls.png)
+
+![Bag views.py](static/images/python-linter-bag-views.png)
+
 - Home Page
 
 |Section|Test Action|Expected Result|Pass/Fail|Comments|
