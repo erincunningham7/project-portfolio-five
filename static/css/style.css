@@ -144,6 +144,14 @@ body {
     object-fit: cover;
 }
 
+.btn-primary {
+    border: none;
+}
+
+.btn-primary:hover {
+    color: #606c38;
+}
+
 /* -------------------------------- Media Queries */
 
 /* a little larger container on xl screens */
