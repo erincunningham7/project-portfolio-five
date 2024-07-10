@@ -364,6 +364,28 @@ The target customers for this online beauty store expand over a wide demographic
 
 ### Bugs
 
+- HTML Validator Results
+
+![Bag Page](static/images/html-validator-bag.png)
+
+![Blog Page](static/images/html-validator-blog.png)
+
+![Blog Post](static/images/html-validator-blogpost.png)
+
+![Contact Page](static/images/html-validator-contact.png)
+
+![Login Page](static/images/html-validator-login.png)
+
+![Product Page](static/images/html-validator-products-1.png)
+
+![Face Products Page](static/images/html-validator-products-face.png)
+
+![Products Page](static/images/html-validator-products.png)
+
+![Review Page](static/images/html-validator-reviews-list.png)
+
+![Signup Page](static/images/html-validator-signup.png)
+
 - Home Page
 
 |Section|Test Action|Expected Result|Pass/Fail|Comments|
