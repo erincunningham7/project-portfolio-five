@@ -668,7 +668,7 @@ All stripe events and webhooks have been tested and are working sufficiently.
 
 - Home page on opera
 
-![Home page on opera](static/images/color-palette-pp5.png)
+![Home page on opera](static/images/browsers-opera.png)
 
 ### Lighthouse
 
