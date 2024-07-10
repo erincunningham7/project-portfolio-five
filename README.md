@@ -458,6 +458,24 @@ The target customers for this online beauty store expand over a wide demographic
 |Admin dashboard|Click on the edit link in a product detail page, ensure it redirects to the edit product page |it redirects to the edit product page|Pass||
 |Admin dashboard|Click on the delete product link in a product detail page, ensure it redirects to the delete product page |it redirects to the delete product page|Pass||
 
+- Contact Page
+
+|Section|Test Action|Expected Result|Pass/Fail|Comments|
+| ---| ---| ---| ---| ---|
+||Click the Contact Us heading|Form appears and is fillable|Pass||
+||Submit contact form|Thank you for contacting us message appears|Pass||
+||Submit the contact form|Form is saved in the database|Pass||
+||Try submitting without * mandatory fields|Form will not submit|Pass||
+
+- Trending Topics
+
+ Authentication
+
+|Section|Test Action|Expected Result|Pass/Fail|Comments|
+| ---| ---| ---| ---| ---|
+||Go to the admin and add a Topic, set status to Publish|Blog post is published on the site|Pass||
+||Go to the admin and set a published post to status Draft|Blog post is no longer available on the site|Pass||
+
 - Stripe 
 
 All stripe events and webhooks have been tested and are working sufficiently.
