@@ -410,6 +410,14 @@ The target customers for this online beauty store expand over a wide demographic
 
 ![Blog views.py](static/images/python-linter-blog-views.png)
 
+3. Checkout
+
+![Checkout admin.py](static/images/python-linter-checkout-admin.png)
+
+![Checkout forms.py](static/images/python-linter-checkout-forms.png)
+
+![Checkout models.py]()
+
 - Home Page
 
 |Section|Test Action|Expected Result|Pass/Fail|Comments|
