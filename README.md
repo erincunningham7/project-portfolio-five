@@ -240,7 +240,7 @@ Toasts from Bootstrap were implemented to provide customers with feedback in rel
 #### Footer
 The footer consist of links to social media.
 
-![footer](static/images/footer.png)
+![footer](static/images/footer-cleancosmetics.png)
 
 ### Home Page
 #### Hero Section
