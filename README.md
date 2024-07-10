@@ -647,11 +647,27 @@ All stripe events and webhooks have been tested and are working sufficiently.
 
 ![Home page responsiveness on tablet](static/images/responsiveness-home-tablet.png)
 
-### Broswers
-
 - Home page on mobile
 
 ![Home page responsiveness on mobile](static/images/responsiveness-home-mobile.jpg)
+
+### Broswers
+
+- Home page on google
+
+![Home page on google](static/images/broswers-google.png)
+
+- Home page on firefox
+
+![Home page on firefox](static/images/browsers-firefox.png)
+
+- Home page on microsoft edge
+
+![Home page on microsoft edge](static/images/browsers-microsoft-edge.png)
+
+- Home page on opera
+
+![Home page on opera](static/images/color-palette-pp5.png)
 
 ## Technologies And Languages
 
