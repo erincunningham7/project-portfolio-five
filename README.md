@@ -26,7 +26,11 @@ Clean Cosmetics is an ecommerce application specifically design to facilitate co
 -   [Marketing](#marketing)
 -   [Search Engine Optimization SEO](#search-engine-optimization-seo)
 -   [Testing](#testing)
--   [Bugs](#Bugs)
+    - [Bugs](#bugs)
+    - [Validation](#validation)
+    - [Basic Testing](#basic-testing)
+    - [Responsiveness](#responsiveness)
+    - [Browsers](#browsers)
 -   [Technologies And Languages](#technologies-and-languages)
     -   [Languages Used](#languages-used)
     -   [Python Modules](#python-modules)
@@ -364,6 +368,10 @@ The target customers for this online beauty store expand over a wide demographic
 
 ### Bugs
 
+No bugs found. 
+
+### Validation
+
 - HTML Validator Results
 
 ![Bag Page](static/images/html-validator-bag.png)
@@ -502,6 +510,8 @@ The settings.py file did not successfully pass the python validator due to the A
 
 ![Newsletter views.py](static/images/python-linter-newsletter-views.png)
 
+### Basic Testing
+
 - Home Page
 
 |Section|Test Action|Expected Result|Pass/Fail|Comments|
@@ -626,6 +636,22 @@ The settings.py file did not successfully pass the python validator due to the A
 - Stripe 
 
 All stripe events and webhooks have been tested and are working sufficiently.
+
+### Responsiveness
+
+- Home page on laptop
+
+![Home page responsiveness on laptop](static/images/responsiveness-home-laptop.png)
+
+- Home page on tablet
+
+![Home page responsiveness on tablet](static/images/responsiveness-home-tablet.png)
+
+### Broswers
+
+- Home page on mobile
+
+![Home page responsiveness on mobile](static/images/responsiveness-home-mobile.jpg)
 
 ## Technologies And Languages
 
