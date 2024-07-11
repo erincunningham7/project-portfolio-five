@@ -154,6 +154,129 @@ The main font used across the site is the Playfair Display font. The Lato font i
 
 ![Entity Relationship Diagram](static/images/erd2.png)
 
+```mermaid
+erDiagram
+    Topic {
+        int id PK
+        varchar title
+        varchar slug
+        datetime updated_on
+        text content
+        datetime created_on
+        int status
+    }
+
+    Order {
+        int id PK
+        varchar order_number
+        int user_profile FK
+        varchar full_name
+        varchar email
+        varchar phone_number
+        varchar country
+        varchar postcode
+        varchar town_or_city
+        varchar street_address1
+        varchar street_address2
+        varchar county
+        datetime date
+        decimal delivery_cost
+        decimal order_total
+        decimal grand_total
+    }
+
+    OrderLineItem {
+        int id PK
+        int order FK
+        int product FK
+        int quantity
+        decimal lineitem_total
+    }
+
+    OrderStatus {
+        int id PK
+        int order FK
+        varchar status
+    }
+
+    Contact {
+        int id PK
+        varchar full_name
+        varchar email
+        varchar subject
+        varchar message
+    }
+
+    Newsletter {
+        int id PK
+        varchar email
+    }
+
+    Category {
+        int id PK
+        varchar name
+        varchar friendly_name
+    }
+
+    Brand {
+        int id PK
+        int category FK
+        varchar name
+    }
+
+    Product {
+        int id PK
+        varchar title
+        int brand FK
+        int category FK
+        text description
+        decimal price
+        varchar image
+        datetime created_on
+        varchar sku
+    }
+
+    UserProfile {
+        int id PK
+        int user FK
+        varchar default_phone_number
+        varchar default_street_address1
+        varchar default_street_address2
+        varchar default_town_or_city
+        varchar default_county
+        varchar default_postcode
+        varchar default_country
+    }
+
+    UserReview {
+        int id PK
+        int product FK
+        int user FK
+        int rating
+        datetime created
+        text review
+    }
+
+    User {
+        int id PK
+        varchar username
+        varchar password
+        varchar email
+    }
+
+    Topic ||--o{ UserProfile: "created by"
+    Order ||--o{ UserProfile: "belongs to"
+    OrderLineItem }o--|| Order: "contains"
+    OrderLineItem }o--|| Product: "for"
+    OrderStatus }o--|| Order: "has"
+    Brand ||--o{ Category: "belongs to"
+    Product ||--o{ Brand: "has"
+    Product ||--o{ Category: "belongs to"
+    UserProfile ||--o{ User: "has"
+    UserReview }o--|| Product: "for"
+    UserReview }o--|| UserProfile: "created by"
+```
+
 1. User:
 The User model is a part of the Django Allauth library. The model comes with predefined fields as standard,for example, username, email, name, password, etc. This model is used for user authentication, hence why changes directly to this model are not advisory. The User model is connected to the UserProfile model with one to one relationship.
 
