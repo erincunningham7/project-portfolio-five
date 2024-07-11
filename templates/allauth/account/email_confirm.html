@@ -7,7 +7,7 @@
 
 
 {% block content %}
-<h1>{% trans "Confirm Email Address" %}</h1>
+<!-- <h1>{% trans "Confirm Email Address" %}</h1>
 
 {% if confirmation %}
 
@@ -30,6 +30,28 @@
 
 <p>{% blocktrans %}This email confirmation link expired or is invalid. Please <a href="{{ email_url }}">issue a new email confirmation request</a>.{% endblocktrans %}</p>
 
+{% endif %} -->
+
+<h1>{% trans "Confirm Email Address" %}</h1>
+
+{% if confirmation %}
+{% if can_confirm %}
+    <p>
+        {% blocktrans with confirmation.email_address.email as email %}Please confirm that <a href="mailto:{{ email }}">{{ email }}</a> is an email address for user {{ user_display }}.{% endblocktrans %}
+    </p>
+    <form method="post" action="{% url 'account_confirm_email' confirmation.key %}">
+        {% csrf_token %}
+            <button type="submit">{% trans 'Confirm' %}</button>
+    </form>
+{% else %}
+    <p>
+        Unable to confirm...
+    </p>
+{% endif %}
+{% else %}
+<p>
+    This email confirmation link expired or is invalid...
+</p>
 {% endif %}
 
 {% endblock content %}
